@@ -1237,63 +1237,131 @@ function inviaNotificaWhatsApp() {
                             <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
                         </div>
 
-                        <!-- FORM DI CONTATTO -->
-                        <form name="Analisi-Casa" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
-                                    <input type="text" name="Nome_Cognome" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
-                                    <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-                                </div>
-                            </div>
+<!-- ================================================================= -->
+<!-- SEZIONE PRENOTAZIONI CON GOOGLE CALENDAR E MODULO NETLIFY AFFIANCATI -->
+<!-- ================================================================= -->
+<section id="prenota" class="py-24 bg-gradient-to-b from-energyBgDark to-energyBg relative z-20">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+            <span class="text-xs text-energyOrange font-bold tracking-widest uppercase">AGENDA DIGITALE & BACKUP</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Fissa il tuo Appuntamento o Invia la Bolletta</h2>
+            <p class="text-slate-300">Seleziona lo slot sul Google Calendar ufficiale oppure inoltra i dettagli della bolletta tramite il modulo protetto posizionato al suo fianco.</p>
+        </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
-                                    <input type="email" name="Email" placeholder="mario.rossi@email.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Servizio di Interesse</label>
-                                    <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-emerald-500">
-                                        <option>Luce & Gas Casa</option>
-                                        <option>Fibra / Internet Casa</option>
-                                        <option>Depuratore Acqua</option>
-                                        <option>Impianto Fotovoltaico / Clima</option>
-                                        <option>Sistema Allarme Casa</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!-- CARICAMENTO BOLLETTA -->
-                            <div>
-                                <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta (PDF o Foto)</label>
-                                <div onclick="document.getElementById('file-input-privati').click()" class="border-2 border-dashed border-slate-800 hover:border-emerald-500/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
-                                    <i data-lucide="upload-cloud" class="w-6 h-6 text-emerald-400 mx-auto mb-1"></i>
-                                    <p id="file-label-privati" class="text-xs text-slate-400">Trascina la bolletta oppure <span class="text-emerald-400 underline">sfoglia</span></p>
-                                    <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, JPG, PNG (Max 15MB)</span>
-                                    
-                                    <input type="file" id="file-input-privati" name="Allegato" class="hidden" onchange="aggiornaNomeFile(this, 'file-label-privati')">
-                                </div>
-                            </div>
-
-                            <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
-                                Invia Richiesta Analisi Casa
-                            </button>
-                        </form>
+        <!-- GRID PRINCIPALE RESPONSIVE (12 COLONNE SU DESKTOP) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            
+            <!-- Colonna Google Calendar (7/12) -->
+            <div class="lg:col-span-7 bg-energyCard rounded-2xl border border-slate-800 p-6 flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute -top-32 -left-32 w-64 h-64 bg-telecomPurple/10 rounded-full blur-3xl"></div>
+                <div class="space-y-4 mb-6 relative z-10">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-telecomPurple animate-pulse shadow-[0_0_10px_rgba(139,92,246,0.6)]"></span>
+                            <span class="text-sm font-bold text-white">Prenotazione Automatica Live</span>
+                        </div>
+                        <span class="text-xs text-slate-400">Google Calendar Sync</span>
                     </div>
-
-                    <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
-                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-                        <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
-                    </div>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Scorri le date libere, seleziona l'orario ideale ed inserisci i tuoi dati. L'appuntamento si sincronizzerà istantaneamente sul mio calendario professionale.
+                    </p>
                 </div>
 
-            </div> <!-- FIX: Chiusura div.grid -->
-        </div> <!-- FIX: Chiusura div.max-w-7xl -->
-    </section> <!-- FIX: Chiusura section#prenota -->
+                <!-- BOX BIANCO PER L'AGENDA -->
+                <div class="relative w-full flex-1 bg-white rounded-xl overflow-hidden z-10 shadow-2xl min-h-[550px]">
+                    <!-- Animazione di Caricamento -->
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-slate-800 gap-3 z-0">
+                        <div class="w-10 h-10 border-4 border-energyOrange border-t-transparent rounded-full animate-spin"></div>
+                        <span class="text-xs font-semibold tracking-wide animate-pulse text-slate-500">Connessione sicura all'agenda...</span>
+                    </div>
+
+                    <!-- Iframe di Google Calendar -->
+                    <iframe 
+                        src="https://app.google" 
+                        class="absolute inset-0 w-full h-full border-0 bg-white z-10"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <div class="w-full mt-4 p-3 bg-energyBgDark/50 rounded-xl border border-slate-800 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
+                    <i data-lucide="lock" class="w-4 h-4 text-energyGreen flex-shrink-0"></i>
+                    <span>Sistema di crittografia e protezione dati nativo fornito da Google.</span>
+                </div>
+            </div>
+
+            <!-- Colonna Modulo Netlify Sistemata (5/12) -->
+            <div class="lg:col-span-5 relative w-full rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                    <div class="mb-6 text-center sm:text-left">
+                        <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Analisi Istantanea</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
+                    </div>
+
+                    <!-- FORM CONFIGURATO PER NETLIFY CON METODO POST E ENCTYPE OBBLIGATORIO -->
+                    <form name="Analisi-Casa" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
+                        
+                        <!-- CAMPO NASCOSTO STRUTTURALE PER PERMETTERE L'ALLEGATO DEL FILE -->
+                        <input type="hidden" name="form-name" value="Analisi-Casa" />
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
+                                <input type="text" name="Nome_Cognome" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
+                                <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+                                <input type="email" name="Email" placeholder="mario.rossi@email.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Servizio di Interesse</label>
+                                <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-emerald-500">
+                                    <option>Luce & Gas Casa</option>
+                                    <option>Fibra / Internet Casa</option>
+                                    <option>Depuratore Acqua</option>
+                                    <option>Impianto Fotovoltaico / Clima</option>
+                                    <option>Sistema Allarme Casa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- SEZIONE CARICAMENTO BOLLETTA FUNZIONANTE -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta (PDF o Foto)</label>
+                            <div onclick="document.getElementById('file-input-privati').click()" class="border-2 border-dashed border-slate-800 hover:border-emerald-500/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
+                                <i data-lucide="upload-cloud" class="w-6 h-6 text-emerald-400 mx-auto mb-1"></i>
+                                <p id="file-label-privati" class="text-xs text-slate-400">Trascina la bolletta oppure <span class="text-emerald-400 underline">sfoglia</span></p>
+                                <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, JPG, PNG (Max 15MB)</span>
+                                
+                                <input type="file" id="file-input-privati" name="Allegato" required class="hidden" onchange="if(this.files.length > 0) { document.getElementById('file-label-privati').innerText = this.files[0].name; }">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
+                            Invia Richiesta Analisi Casa
+                        </button>
+                    </form>
+                </div>
+
+                <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                    <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
+                </div>
+            </div>
+
+        </div> <!-- CHIUSURA DELLA GRID PRINCIPALE -->
+    </div>
+</section>
+</div> <!-- FIX: Chiusura div.grid -->
+</div> <!-- FIX: Chiusura div.max-w-7xl -->
+</section> <!-- FIX: Chiusura section#prenota -->
 
 <!-- SEZIONE CONFRONTO KILLER -->
 <section id="confronto-killer" class="py-20 bg-slate-900/50 border-y border-slate-800">
