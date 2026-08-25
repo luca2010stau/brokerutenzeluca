@@ -1178,7 +1178,7 @@ function inviaNotificaWhatsApp() {
     </div>
 </div>
 
-    <!-- SEZIONE PRENOTAZIONI CON GOOGLE CALENDAR E MODULO GOOGLE AFFIANCATI -->
+<!-- SEZIONE PRENOTAZIONI CON GOOGLE CALENDAR E MODULO GOOGLE AFFIANCATI -->
     <section id="prenota" class="py-24 bg-gradient-to-b from-energyBgDark to-energyBg relative">
         <div class="max-w-7xl mx-auto px-6 space-y-16">
             <div class="text-center space-y-4 max-w-2xl mx-auto">
@@ -1187,7 +1187,7 @@ function inviaNotificaWhatsApp() {
                 <p class="text-slate-300">Seleziona lo slot sul Google Calendar ufficiale oppure inoltra i dettagli della bolletta tramite il modulo protetto posizionato al suo fianco.</p>
             </div>
 
-            <!-- GRID PRINCIPALE SISTEMATA -->
+            <!-- GRID PRINCIPALE SISTEMATA (12 COLONNE) -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
                 
                 <!-- Colonna Google Calendar (7/12) -->
@@ -1229,133 +1229,194 @@ function inviaNotificaWhatsApp() {
                     </div>
                 </div>
 
-<div class="relative w-full flex-1 rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8">
-    <div class="mb-6 text-center sm:text-left">
-        <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Analisi Istantanea</span>
-        <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
-    </div>
+                <!-- Colonna Modulo Lead (5/12) - FIX: Aggiunta classe lg:col-span-5 -->
+                <div class="lg:col-span-5 relative w-full flex-1 rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="mb-6 text-center sm:text-left">
+                            <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Analisi Istantanea</span>
+                            <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
+                        </div>
 
-    <!-- FORM COLLEGATO A TELEGRAM -->
-    <form onsubmit="inviaNotificaLead(event, 'Privati')" class="space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
-                <input type="text" name="Nome_Cognome" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
-                <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-            </div>
-        </div>
+                        <!-- FORM DI CONTATTO -->
+                        <form name="Analisi-Casa" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
+                                    <input type="text" name="Nome_Cognome" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
+                                    <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                                </div>
+                            </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
-                <input type="email" name="Email" placeholder="mario.rossi@email.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Servizio di Interesse</label>
-                <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-emerald-500">
-                    <option>Luce & Gas Casa</option>
-                    <option>Fibra / Internet Casa</option>
-                    <option>Depuratore Acqua</option>
-                    <option>Impianto Fotovoltaico / Clima</option>
-                    <option>Sistema Allarme Casa</option>
-                </select>
-            </div>
-        </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+                                    <input type="email" name="Email" placeholder="mario.rossi@email.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Servizio di Interesse</label>
+                                    <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-emerald-500">
+                                        <option>Luce & Gas Casa</option>
+                                        <option>Fibra / Internet Casa</option>
+                                        <option>Depuratore Acqua</option>
+                                        <option>Impianto Fotovoltaico / Clima</option>
+                                        <option>Sistema Allarme Casa</option>
+                                    </select>
+                                </div>
+                            </div>
 
-        <!-- CARICAMENTO BOLLETTA CON GESTIONE CLICK AUTOMATICA -->
-        <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta (PDF o Foto)</label>
-            <div onclick="document.getElementById('file-input-privati').click()" class="border-2 border-dashed border-slate-800 hover:border-emerald-500/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
-                <i data-lucide="upload-cloud" class="w-6 h-6 text-emerald-400 mx-auto mb-1"></i>
-                <p id="file-label-privati" class="text-xs text-slate-400">Trascina la bolletta oppure <span class="text-emerald-400 underline">sfoglia</span></p>
-                <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, JPG, PNG (Max 15MB)</span>
-                
-                <input type="file" id="file-input-privati" name="Allegato" class="hidden" onchange="aggiornaNomeFile(this, 'file-label-privati')">
-            </div>
-        </div>
+                            <!-- CARICAMENTO BOLLETTA -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta (PDF o Foto)</label>
+                                <div onclick="document.getElementById('file-input-privati').click()" class="border-2 border-dashed border-slate-800 hover:border-emerald-500/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
+                                    <i data-lucide="upload-cloud" class="w-6 h-6 text-emerald-400 mx-auto mb-1"></i>
+                                    <p id="file-label-privati" class="text-xs text-slate-400">Trascina la bolletta oppure <span class="text-emerald-400 underline">sfoglia</span></p>
+                                    <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, JPG, PNG (Max 15MB)</span>
+                                    
+                                    <input type="file" id="file-input-privati" name="Allegato" class="hidden" onchange="aggiornaNomeFile(this, 'file-label-privati')">
+                                </div>
+                            </div>
 
-        <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
-            Invia Richiesta Analisi Casa
-        </button>
-    </form>
+                            <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
+                                Invia Richiesta Analisi Casa
+                            </button>
+                        </form>
+                    </div>
 
-    <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
-        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
-        <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
-    </div>
-</div>
+                    <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i>
+                        <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
+                    </div>
+                </div>
 
-<!-- ================================================================= -->
-<!-- NUOVA SEZIONE: L'ATTACCO DIRETTO AI GRANDI COMPETITOR             -->
-<!-- ================================================================= -->
-<!-- SEZIONE CONFRONTO KILLER (Completata e chiusa) -->
-    <section id="confronto-killer" class="py-20 bg-slate-900/50 border-y border-slate-800">
+            </div> <!-- FIX: Chiusura div.grid -->
+        </div> <!-- FIX: Chiusura div.max-w-7xl -->
+    </section> <!-- FIX: Chiusura section#prenota -->
+
+<!-- SEZIONE CONFRONTO KILLER -->
+<section id="confronto-killer" class="py-20 bg-slate-900/50 border-y border-slate-800">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <div class="text-center max-w-3xl mx-auto mb-16">
+
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+
                     Fornitori Tradizionali vs Consulenza Diretta
+
                 </h2>
+
                 <p class="mt-4 text-lg text-slate-400">
+
                     Scopri perché affidarsi a un consulente indipendente cambia radicalmente la gestione delle tue utenze.
+
                 </p>
+
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
                 <!-- Carta Fornitori Tradizionali -->
+
                 <div class="bg-slate-900 border border-red-500/30 rounded-2xl p-8 relative overflow-hidden">
+
                     <div class="absolute top-0 right-0 bg-red-500/10 text-red-400 text-xs font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+
                         Modello Standard
+
                     </div>
+
                     <h3 class="text-xl font-bold text-slate-200 mb-6 flex items-center gap-2">
+
                         <i data-lucide="x-circle" class="w-6 h-6 text-red-500"></i> Call Center & Gestori Standard
+
                     </h3>
+
                     <ul class="space-y-4 text-slate-400">
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+
                             <span>Tempi di attesa infiniti al telefono ed operatori sempre diversi.</span>
+
                         </li>
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+
                             <span>Rimodulazioni unilaterali a fine promozione senza preavviso chiaro.</span>
+
                         </li>
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="minus" class="w-5 h-5 text-red-400 shrink-0 mt-0.5"></i>
+
                             <span>Nessuna assistenza in caso di errori di fatturazione o volture complesse.</span>
+
                         </li>
+
                     </ul>
+
                 </div>
 
-                <!-- Carta BrokerUtenzeLuca -->
+<!-- Carta BrokerUtenzeLuca -->
+
                 <div class="bg-gradient-to-br from-slate-900 to-emerald-950/40 border border-emerald-500/40 rounded-2xl p-8 relative overflow-hidden shadow-xl shadow-emerald-950/20">
+
                     <div class="absolute top-0 right-0 bg-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-1 rounded-bl-lg uppercase tracking-wider">
+
                         Consulenza Dedicata
+
                     </div>
+
                     <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+
                         <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-400"></i> Gestione Indipendente
+
                     </h3>
+
                     <ul class="space-y-4 text-slate-200">
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+
                             <span>Referente unico diretto su WhatsApp e telefono, senza filtri.</span>
+
                         </li>
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+
                             <span>Monitoraggio costante del mercato e avviso immediato in caso di rialzi.</span>
+
                         </li>
+
                         <li class="flex items-start gap-3">
+
                             <i data-lucide="check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+
                             <span>Gestione completa di reclami, volture, attivazioni e pratiche burocratiche.</span>
+
                         </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
     <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
@@ -1363,6 +1424,7 @@ function inviaNotificaWhatsApp() {
                     Broker<span class="text-emerald-400">UtenzeLuca</span>
                 </span>
                 <p class="text-sm text-slate-500 mt-1">Consulenza indipendente Luce, Gas, Telefonia e Servizi Energetici.</p>
+                <p class="text-xs text-slate-600 mt-1">P.IVA: 04108500127</p>
             </div>
             <div class="text-xs text-slate-500 text-center md:text-right">
                 <p>© 2026 BrokerUtenzeLuca. Tutti i diritti riservati.</p>
@@ -2569,5 +2631,8 @@ function closeExitModal() {
         card.classList.add('scale-95');
     }
 }
+element.classList.remove('border-slate-800');
+    }
 </script>
+</body>
 </html>
