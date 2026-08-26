@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficientamento Energetico - Broker Utenze Luca</title>
+    <meta name="description" content="Soluzioni di efficientamento energetico con i migliori marchi sul mercato. Fotovoltaico, pompe di calore e climatizzazione con mandato diretto Fiditech e ComparaSemplice.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        energyBg: '#09152b',
+                        energyBgDark: '#040a16',
+                        energyCard: '#0f2246',
+                        energyGreen: '#10b981',
+                        energyOrange: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; background: #040a16; color: #f1f5f9; }</style>
+</head>
+<body class="pt-20">
+
+    <!-- HERO EFFICIENTAMENTO -->
+    <section class="py-20 bg-gradient-to-b from-energyBg to-energyBgDark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-xs text-emerald-400 font-bold uppercase tracking-widest px-3 py-1 bg-emerald-500/10 rounded-full border border-emerald-500/20">Tecnologia & Risparmio Energetico</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-4 mb-6">Riduci i Consumi con le Migliori Tecnologie sul Mercato</h1>
+            <p class="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+                Grazie alla collaborazione con partner leader del settore come <strong>Fiditech</strong> e <strong>ComparaSemplice</strong>, accedo tramite mandato diretto alle migliori marche di impianti fotovoltaici, pompe di calore e sistemi di climatizzazione per garantire massima efficienza e abbatimento delle bollette.
+            </p>
+        </div>
+    </section>
+
+    <!-- PARTNER E MANDATI DIRETTI -->
+    <section class="py-12 bg-energyBgDark border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Segnalazione & Soluzioni Garantite tramite Mandato Diretto</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-16 opacity-80">
+                <div class="bg-slate-900 border border-slate-800 px-6 py-3 rounded-xl font-bold text-white tracking-wider">FIDITECH</div>
+                <div class="bg-slate-900 border border-slate-800 px-6 py-3 rounded-xl font-bold text-white tracking-wider">COMPARA SEMPLICE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIZI EFFICIENTAMENTO -->
+    <section class="py-20 bg-energyBg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-energyCard p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <i data-lucide="sun" class="w-10 h-10 text-emerald-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Impianti Fotovoltaici</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Progettazione e installazione con pannelli ad alta efficienza e sistemi di accumulo delle migliori marche per produrre in autonomia la tua energia.</p>
+                </div>
+                <div class="bg-energyCard p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <i data-lucide="flame" class="w-10 h-10 text-emerald-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Pompe di Calore</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Sostituzione dei vecchi generatori con sistemi ibridi o full electric per riscaldare e raffrescare la casa riducendo i consumi di gas.</p>
+                </div>
+                <div class="bg-energyCard p-8 rounded-2xl border border-slate-800 hover:border-emerald-500/50 transition">
+                    <i data-lucide="wind" class="w-10 h-10 text-emerald-400 mb-4"></i>
+                    <h3 class="text-xl font-bold text-white mb-2">Climatizzazione Smart</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Soluzioni inverter di ultima generazione a basso assorbimento per un comfort termico ottimale durante tutto l'anno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULO NETLIFY RICHIESTA EFFICIENTAMENTO -->
+    <section id="prenota" class="py-20 bg-energyBgDark">
+        <div class="max-w-3xl mx-auto px-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
+            <h2 class="text-2xl font-bold text-white text-center mb-2">Richiedi uno Studio di Fattibilità Gratuito o di un soppraluogo</h2>
+            <p class="text-slate-400 text-xs text-center mb-6">Compila il modulo per analizzare la fattibilità dell'impianto o degli interventi di efficientamento.</p>
+            
+      <form id="form-efficientamento" name="Richiesta-Efficientamento" method="POST" data-netlify="true" class="space-y-4">
+                <input type="hidden" name="form-name" value="Richiesta-Efficientamento" />
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="text" name="Nome_Cognome" placeholder="Nome e Cognome" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                    <input type="tel" name="Telefono" placeholder="Telefono / WhatsApp" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <input type="email" name="Email" placeholder="Email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                    <select name="Intervento_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:border-emerald-500 focus:outline-none">
+                        <option>Fotovoltaico / Accumulo</option>
+                        <option>Pompa di Calore</option>
+                        <option>Climatizzazione</option>
+                        <option>Valutazione Completa</option>
+                    </select>
+                </div>
+                <textarea name="Note" rows="3" placeholder="Descrivi brevemente l'immobile o la tua esigenza" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none"></textarea>
+                <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl transition text-sm">Richiedi Contatto Professionale</button>
+            </form>
+        </div>
+    </section>
+
+    <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
+<!-- SCRIPT INVIO TELEGRAM + NETLIFY EFFICIENTAMENTO -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Inizializzazione icone Lucide
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const form = document.getElementById('form-efficientamento');
+        
+        // Credenziali Telegram configurate
+        const BOT_TOKEN = '8846889230:AAEgE-2B-On_V-GKDVx_ywWcOa9ZH9WNqFo';
+        const CHAT_ID = '8232121388';
+
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const nome = formData.get('Nome_Cognome') || '';
+                const telefono = formData.get('Telefono') || '';
+                const email = formData.get('Email') || '';
+                const intervento = formData.get('Intervento_Interesse') || '';
+                const note = formData.get('Note') || 'Nessuna nota inserita';
+
+                // Formattazione messaggio per il bot Telegram
+                const messaggioTelegram = 
+`⚡ *NUOVA RICHIESTA EFFICIENTAMENTO*
+
+👤 *Cliente:* ${nome}
+📞 *Telefono:* ${telefono}
+📧 *Email:* ${email}
+🛠️ *Intervento:* ${intervento}
+📝 *Note:* ${note}`;
+
+                try {
+                    // 1. Invio istantaneo al Bot Telegram
+                    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: messaggioTelegram,
+                            parse_mode: 'Markdown'
+                        })
+                    });
+
+                    // 2. Salvataggio parallelo su Netlify Forms
+                    await fetch('/', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    });
+
+                    alert('Richiesta inviata con successo! Verrai contattato a breve.');
+                    form.reset();
+
+                } catch (error) {
+                    console.error('Errore durante l\'invio:', error);
+                    // Fallback di sicurezza
+                    form.submit();
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
