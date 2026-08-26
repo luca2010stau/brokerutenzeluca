@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabora con Me - Broker Utenze Luca</title>
+    <meta name="description" content="Diventa partner di Broker Utenze Luca. Collaborazione professionale riservata ad agenzie immobiliari, imprese edili, elettricisti, idraulici e professionisti.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        energyBg: '#09152b',
+                        energyBgDark: '#040a16',
+                        energyCard: '#0f2246',
+                        energyGreen: '#10b981',
+                        energyOrange: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;600;700;800&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Plus Jakarta Sans', sans-serif; background: #040a16; color: #f1f5f9; }</style>
+</head>
+<body class="pt-20">
+
+    <!-- HERO COLLABORA -->
+    <section class="py-20 bg-gradient-to-b from-energyBg to-energyBgDark">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-xs text-energyOrange font-bold uppercase tracking-widest px-3 py-1 bg-energyOrange/10 rounded-full border border-energyOrange/20">Partnership B2B</span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-4 mb-6">Amplia i Tuoi Servizi Senza Oneri Operativi</h1>
+            <p class="text-slate-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
+                Offri ai tuoi clienti un servizio completo di consulenza e brokeraggio per Luce, Gas, Telefonia ed Efficientamento Energetico. Una collaborazione chiara e strutturata pensata per valorizzare la tua attività.
+            </p>
+        </div>
+    </section>
+
+    <!-- CHI PUÒ COLLABORARE -->
+    <section class="py-16 bg-energyBg">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-2xl font-bold text-white text-center mb-12">A Chi è Rivolta la Collaborazione</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-energyCard p-6 rounded-xl border border-slate-800 text-center">
+                    <i data-lucide="building-2" class="w-8 h-8 text-energyOrange mx-auto mb-3"></i>
+                    <h3 class="font-bold text-white mb-1">Agenti Immobiliari</h3>
+                    <p class="text-xs text-slate-400">Volture, subentri e attivazioni rapide per i clienti che acquistano o affittano casa.</p>
+                </div>
+                <div class="bg-energyCard p-6 rounded-xl border border-slate-800 text-center">
+                    <i data-lucide="wrench" class="w-8 h-8 text-energyOrange mx-auto mb-3"></i>
+                    <h3 class="font-bold text-white mb-1">Elettricisti e Idraulici</h3>
+                    <p class="text-xs text-slate-400">Inoltro pratiche di efficientamento, fotovoltaico e pompe di calore per i tuoi cantieri.</p>
+                </div>
+                <div class="bg-energyCard p-6 rounded-xl border border-slate-800 text-center">
+                    <i data-lucide="hard-hat" class="w-8 h-8 text-energyOrange mx-auto mb-3"></i>
+                    <h3 class="font-bold text-white mb-1">Imprese Edili</h3>
+                    <p class="text-xs text-slate-400">Gestione integrata forniture energetiche e impiantistica per nuove costruzioni e ristrutturazioni.</p>
+                </div>
+                <div class="bg-energyCard p-6 rounded-xl border border-slate-800 text-center">
+                    <i data-lucide="briefcase" class="w-8 h-8 text-energyOrange mx-auto mb-3"></i>
+                    <h3 class="font-bold text-white mb-1">Consulenti e Tecnici</h3>
+                    <p class="text-xs text-slate-400">Un unico interlocutore indipendente a supporto delle esigenze dei tuoi assistiti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODULO NETLIFY RICHIEDI COLLABORAZIONE -->
+    <section class="py-20 bg-energyBgDark">
+        <div class="max-w-3xl mx-auto px-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
+            <h2 class="text-2xl font-bold text-white text-center mb-2">Proponi una Collaborazione</h2>
+            <p class="text-slate-400 text-xs text-center mb-6">Compila il modulo sottostante per valutare insieme le modalità operative più adatte alla tua struttura.</p>
+            
+           <form id="form-collabora" name="Proposta-Collaborazione" method="POST" data-netlify="true" class="space-y-4">
+                <input type="hidden" name="form-name" value="Proposta-Collaborazione" />
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome / Referente</label>
+                        <input type="text" name="Nome_Referente" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Ragione Sociale / Studio</label>
+                        <input type="text" name="Azienda_Studio" placeholder="Nome Attività / Impresa" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Settore Operativo</label>
+                        <select name="Settore" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:border-energyOrange focus:outline-none">
+                            <option>Agenzia Immobiliare</option>
+                            <option>Impresa Edile</option>
+                            <option>Elettricista / Idraulico</option>
+                            <option>Amministratore di Condominio</option>
+                            <option>Consulente / Altro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
+                        <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Aziendale</label>
+                    <input type="email" name="Email" placeholder="info@tuaazienda.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Dettagli o Messaggio</label>
+                    <textarea name="Messaggio" rows="3" placeholder="Indica la zona operativa o il tipo di servizio a cui sei interessato" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3.5 bg-energyOrange hover:bg-amber-500 text-slate-950 font-bold rounded-xl transition text-sm">Invia Richiesta di Collaborazione</button>
+            </form>
+        </div>
+    </section>
+
+    <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
+  <!-- SCRIPT INVIO TELEGRAM + NETLIFY COLLABORA CON ME -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Inizializzazione icone Lucide
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const form = document.getElementById('form-collabora');
+        
+        // Credenziali Telegram configurate
+        const BOT_TOKEN = '8846889230:AAEgE-2B-On_V-GKDVx_ywWcOa9ZH9WNqFo';
+        const CHAT_ID = '8232121388';
+
+        if (form) {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const nome = formData.get('Nome_Referente') || '';
+                const azienda = formData.get('Azienda_Studio') || '';
+                const settore = formData.get('Settore') || '';
+                const telefono = formData.get('Telefono') || '';
+                const email = formData.get('Email') || '';
+                const messaggio = formData.get('Messaggio') || 'Nessun messaggio inserito';
+
+                // Formattazione messaggio Telegram B2B
+                const messaggioTelegram = 
+`🤝 *NUOVA PROPOSTA DI COLLABORAZIONE*
+
+👤 *Referente:* ${nome}
+🏢 *Azienda / Studio:* ${azienda}
+💼 *Settore:* ${settore}
+📞 *Telefono:* ${telefono}
+📧 *Email:* ${email}
+💬 *Messaggio:* ${messaggio}`;
+
+                try {
+                    // 1. Invio Notifica al Bot Telegram
+                    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: messaggioTelegram,
+                            parse_mode: 'Markdown'
+                        })
+                    });
+
+                    // 2. Salvataggio su Netlify Forms
+                    await fetch('/', {
+                        method: 'POST',
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams(formData).toString()
+                    });
+
+                    alert('Richiesta di collaborazione inviata! Ti ricontatterò al più presto.');
+                    form.reset();
+
+                } catch (error) {
+                    console.error('Errore durante l\'invio:', error);
+                    // Fallback di sicurezza
+                    form.submit();
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
