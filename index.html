@@ -89,50 +89,80 @@
 
 <body class="selection:bg-energyOrange selection:text-energyBgDark pt-20">
 
-    <div class="bg-gradient-to-r from-energyOrange to-amber-500 text-energyBgDark text-center py-2 px-4 text-xs md:text-sm font-bold shadow-md relative z-50">
-        ⚡ Mercato Energetico in aggiornamento: prenota oggi per bloccare le migliori tariffe fisse della stagione!
-    </div>
+<!-- BANNER TOP -->
+<div class="bg-gradient-to-r from-energyOrange to-amber-500 text-energyBgDark text-center py-2 px-4 text-xs md:text-sm font-bold shadow-md relative z-50">
+    ⚡ Mercato Energetico in aggiornamento: prenota oggi per bloccare le migliori tariffe fisse della stagione!
+</div>
 
-    <!-- NAVBAR AGGIORNATA CON TUTTE LE PAGINE -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-energyBgDark/80 backdrop-blur-md border-b border-energyCard/50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
-            <a href="index.html" class="h-16 flex items-center shrink-0">
-                <img src="logo.png" alt="Broker Utenze Luca" class="h-full w-auto object-contain">
-            </a>
+<!-- NAVBAR HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 bg-energyBgDark/80 backdrop-blur-md border-b border-energyCard/50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="index.html" class="h-14 flex items-center shrink-0">
+            <img src="logo.png" alt="Broker Utenze Luca" class="h-full w-auto object-contain">
+        </a>
 
-            <!-- MENU DESKTOP AGGIORNATO -->
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Privati & Casa</a>
-                <a href="amministratori-condominio.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Amministratori Condominio</a>
-                <a href="servizi-business.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Aziende & Business</a>
-                <a href="#prenota" class="px-5 py-2.5 rounded-full bg-energyCard/80 text-sm font-semibold text-energyOrange border border-energyOrange/30 hover:bg-energyOrange hover:text-slate-950 transition-all duration-300">Richiedi Analisi</a>
-            </nav>
+        <!-- MENU DESKTOP (Visibile da schermi LG) -->
+        <nav class="hidden lg:flex items-center gap-6">
+            <a href="index.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Privati & Casa</a>
+            <a href="servizi-business.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Aziende & Business</a>
+            <a href="amministratori-condominio.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Amministratori</a>
+            <a href="efficientamento.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Efficientamento</a>
+            <a href="chi-sono.html" class="text-sm font-medium text-slate-300 hover:text-energyOrange transition-colors">Chi Sono</a>
+            <a href="#prenota" class="px-5 py-2.5 rounded-full bg-energyCard/80 text-sm font-semibold text-energyOrange border border-energyOrange/30 hover:bg-energyOrange hover:text-slate-950 transition-all duration-300">Richiedi Analisi</a>
+        </nav>
 
-            <!-- BOTTONE MENU MOBILE -->
-            <button id="mobileMenuBtn" onclick="toggleMenuMobile()" class="md:hidden text-slate-300 hover:text-energyOrange transition-colors">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-        </div>
-    </header>
-
-    <!-- MOBILE MENU OVERLAY AGGIORNATO -->
-    <div id="mobileMenu" class="fixed inset-0 z-40 bg-energyBgDark/95 backdrop-blur-lg flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-300 md:hidden">
-        <button id="closeMenuBtn" onclick="toggleMenuMobile()" class="absolute top-6 right-6 text-slate-300 hover:text-energyOrange transition-colors">
-            <i data-lucide="x" class="w-8 h-8"></i>
+        <!-- BOTTONE MENU MOBILE -->
+        <button id="mobileMenuBtn" aria-label="Apri Menu" class="lg:hidden text-slate-300 hover:text-energyOrange transition-colors focus:outline-none">
+            <i data-lucide="menu" class="w-7 h-7"></i>
         </button>
-        <a href="index.html" onclick="toggleMenuMobile()" class="text-2xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Privati & Casa</a>
-        <a href="amministratori-condominio.html" onclick="toggleMenuMobile()" class="text-2xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Amministratori Condominio</a>
-        <a href="servizi-business.html" onclick="toggleMenuMobile()" class="text-2xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Aziende & Business</a>
-        <a href="#prenota" onclick="toggleMenuMobile()" class="px-8 py-3 rounded-full bg-energyOrange text-energyBgDark font-bold text-lg glow-effect transition-all">Richiedi Analisi</a>
     </div>
+</header>
 
-    <script>
-    function toggleMenuMobile() {
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('translate-x-full');
-    }
-    </script>
+<!-- MOBILE MENU OVERLAY FULLSCREEN -->
+<div id="mobileMenu" class="fixed inset-0 z-50 bg-energyBgDark/95 backdrop-blur-lg flex flex-col items-center justify-center gap-6 translate-x-full transition-transform duration-300 lg:hidden">
+    <button id="closeMenuBtn" aria-label="Chiudi Menu" class="absolute top-6 right-6 text-slate-300 hover:text-energyOrange transition-colors focus:outline-none">
+        <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    
+    <a href="index.html" class="mobile-link text-xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Privati & Casa</a>
+    <a href="servizi-business.html" class="mobile-link text-xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Aziende & Business</a>
+    <a href="amministratori-condominio.html" class="mobile-link text-xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Amministratori Condominio</a>
+    <a href="efficientamento.html" class="mobile-link text-xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Efficientamento Energetico</a>
+    <a href="chi-sono.html" class="mobile-link text-xl font-semibold text-slate-200 hover:text-energyOrange transition-colors">Chi Sono</a>
+    
+    <a href="#prenota" class="mobile-link mt-4 px-8 py-3 rounded-full bg-energyOrange text-energyBgDark font-bold text-lg glow-effect transition-all">Richiedi Analisi</a>
+</div>
+
+<!-- SCRIPT GESTIONE MENU & ICONE LUCIDE -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Rendering delle icone Lucide
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn && closeBtn && mobileMenu) {
+            menuBtn.addEventListener('click', toggleMenu);
+            closeBtn.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+    });
+</script>
 
 <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center justify-center pt-12 overflow-hidden">
@@ -1178,68 +1208,7 @@ function inviaNotificaWhatsApp() {
     </div>
 </div>
 
-<!-- SEZIONE PRENOTAZIONI CON GOOGLE CALENDAR E MODULO GOOGLE AFFIANCATI -->
-    <section id="prenota" class="py-24 bg-gradient-to-b from-energyBgDark to-energyBg relative">
-        <div class="max-w-7xl mx-auto px-6 space-y-16">
-            <div class="text-center space-y-4 max-w-2xl mx-auto">
-                <span class="text-xs text-energyOrange font-bold tracking-widest uppercase">AGENDA DIGITALE & BACKUP</span>
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white">Fissa il tuo Appuntamento o Invia la Bolletta</h2>
-                <p class="text-slate-300">Seleziona lo slot sul Google Calendar ufficiale oppure inoltra i dettagli della bolletta tramite il modulo protetto posizionato al suo fianco.</p>
-            </div>
-
-            <!-- GRID PRINCIPALE SISTEMATA (12 COLONNE) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                
-                <!-- Colonna Google Calendar (7/12) -->
-                <div class="lg:col-span-7 bg-energyCard rounded-2xl border border-slate-800 p-6 flex flex-col justify-between relative overflow-hidden group">
-                    <div class="absolute -top-32 -left-32 w-64 h-64 bg-telecomPurple/10 rounded-full blur-3xl"></div>
-                    <div class="space-y-4 mb-6 relative z-10">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-full bg-telecomPurple animate-pulse shadow-[0_0_10px_rgba(139,92,246,0.6)]"></span>
-                                <span class="text-sm font-bold text-white">Prenotazione Automatica Live</span>
-                            </div>
-                            <span class="text-xs text-slate-400">Google Calendar Sync</span>
-                        </div>
-                        <p class="text-sm text-slate-300 leading-relaxed">
-                            Scorri le date libere, seleziona l'orario ideale ed inserisci i tuoi dati. L'appuntamento si sincronizzerà istantaneamente sul mio calendario professionale.
-                        </p>
-                    </div>
-
-                    <!-- BOX BIANCO PER L'AGENDA -->
-                    <div class="relative w-full flex-1 bg-white rounded-xl overflow-hidden z-10 shadow-2xl min-h-[550px]">
-                        <!-- Animazione di Caricamento -->
-                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-slate-800 gap-3 z-0">
-                            <div class="w-10 h-10 border-4 border-energyOrange border-t-transparent rounded-full animate-spin"></div>
-                            <span class="text-xs font-semibold tracking-wide animate-pulse text-slate-500">Connessione sicura all'agenda...</span>
-                        </div>
-
-                        <!-- Iframe di Google Calendar -->
-                        <iframe 
-                            src="https://calendar.app.google/JR8oGY695bCGmV3NA?gv=true" 
-                            class="absolute inset-0 w-full h-full border-0 bg-white z-10"
-                            allowfullscreen=""
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    
-                    <div class="w-full mt-4 p-3 bg-energyBgDark/50 rounded-xl border border-slate-800 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
-                        <i data-lucide="lock" class="w-4 h-4 text-energyGreen flex-shrink-0"></i>
-                        <span>Sistema di crittografia e protezione dati nativo fornito da Google.</span>
-                    </div>
-                </div>
-
-                <!-- Colonna Modulo Lead (5/12) - FIX: Aggiunta classe lg:col-span-5 -->
-                <div class="lg:col-span-5 relative w-full flex-1 rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="mb-6 text-center sm:text-left">
-                            <span class="text-emerald-400 text-xs font-bold uppercase tracking-widest">Analisi Istantanea</span>
-                            <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
-                        </div>
-
-<!-- ================================================================= -->
 <!-- SEZIONE PRENOTAZIONI CON GOOGLE CALENDAR E MODULO NETLIFY AFFIANCATI -->
-<!-- ================================================================= -->
 <section id="prenota" class="py-24 bg-gradient-to-b from-energyBgDark to-energyBg relative z-20">
     <div class="max-w-7xl mx-auto px-6 space-y-16">
         <div class="text-center space-y-4 max-w-2xl mx-auto">
@@ -1248,7 +1217,7 @@ function inviaNotificaWhatsApp() {
             <p class="text-slate-300">Seleziona lo slot sul Google Calendar ufficiale oppure inoltra i dettagli della bolletta tramite il modulo protetto posizionato al suo fianco.</p>
         </div>
 
-        <!-- GRID PRINCIPALE RESPONSIVE (12 COLONNE SU DESKTOP) -->
+        <!-- GRID PRINCIPALE (12 COLONNE) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             
             <!-- Colonna Google Calendar (7/12) -->
@@ -1267,17 +1236,15 @@ function inviaNotificaWhatsApp() {
                     </p>
                 </div>
 
-                <!-- BOX BIANCO PER L'AGENDA -->
+                <!-- BOX AGENDA -->
                 <div class="relative w-full flex-1 bg-white rounded-xl overflow-hidden z-10 shadow-2xl min-h-[550px]">
-                    <!-- Animazione di Caricamento -->
                     <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-slate-800 gap-3 z-0">
                         <div class="w-10 h-10 border-4 border-energyOrange border-t-transparent rounded-full animate-spin"></div>
                         <span class="text-xs font-semibold tracking-wide animate-pulse text-slate-500">Connessione sicura all'agenda...</span>
                     </div>
 
-                    <!-- Iframe di Google Calendar -->
                     <iframe 
-                        src="https://app.google" 
+                        src="https://calendar.app.google/JR8oGY695bCGmV3NA?gv=true" 
                         class="absolute inset-0 w-full h-full border-0 bg-white z-10"
                         allowfullscreen=""
                         loading="lazy">
@@ -1290,7 +1257,7 @@ function inviaNotificaWhatsApp() {
                 </div>
             </div>
 
-            <!-- Colonna Modulo Netlify Sistemata (5/12) -->
+            <!-- Colonna Modulo Netlify (5/12) -->
             <div class="lg:col-span-5 relative w-full rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
                 <div>
                     <div class="mb-6 text-center sm:text-left">
@@ -1298,10 +1265,7 @@ function inviaNotificaWhatsApp() {
                         <h3 class="text-xl font-bold text-white mt-1">Richiedi Valutazione Gratuita</h3>
                     </div>
 
-                    <!-- FORM CONFIGURATO PER NETLIFY CON METODO POST E ENCTYPE OBBLIGATORIO -->
                     <form name="Analisi-Casa" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
-                        
-                        <!-- CAMPO NASCOSTO STRUTTURALE PER PERMETTERE L'ALLEGATO DEL FILE -->
                         <input type="hidden" name="form-name" value="Analisi-Casa" />
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1325,14 +1289,12 @@ function inviaNotificaWhatsApp() {
                                 <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-emerald-500">
                                     <option>Luce & Gas Casa</option>
                                     <option>Fibra / Internet Casa</option>
-                                    <option>Depuratore Acqua</option>
-                                    <option>Impianto Fotovoltaico / Clima</option>
-                                    <option>Sistema Allarme Casa</option>
+                                    <option>Efficientamento Energetico</option>
+                                    <option>Telefonia Business</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- SEZIONE CARICAMENTO BOLLETTA FUNZIONANTE -->
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta (PDF o Foto)</label>
                             <div onclick="document.getElementById('file-input-privati').click()" class="border-2 border-dashed border-slate-800 hover:border-emerald-500/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
@@ -1356,13 +1318,9 @@ function inviaNotificaWhatsApp() {
                 </div>
             </div>
 
-        </div> <!-- CHIUSURA DELLA GRID PRINCIPALE -->
+        </div>
     </div>
 </section>
-</div> <!-- FIX: Chiusura div.grid -->
-</div> <!-- FIX: Chiusura div.max-w-7xl -->
-</section> <!-- FIX: Chiusura section#prenota -->
-
 <!-- SEZIONE CONFRONTO KILLER -->
 <section id="confronto-killer" class="py-20 bg-slate-900/50 border-y border-slate-800">
 
@@ -1495,7 +1453,7 @@ function inviaNotificaWhatsApp() {
                 <p class="text-xs text-slate-600 mt-1">P.IVA: 04108500127</p>
             </div>
             <div class="text-xs text-slate-500 text-center md:text-right">
-                <p>© 2026 BrokerUtenzeLuca. Tutti i diritti riservati.</p>
+                <p>© <span id="year"></span> BrokerUtenzeLuca. Tutti i diritti riservati.</p>
                 <p class="mt-1"><a href="/privacy-policy" class="hover:underline">Privacy Policy</a> | <a href="/cookie-policy" class="hover:underline">Cookie Policy</a></p>
             </div>
         </div>
@@ -1685,48 +1643,6 @@ function inviaNotificaWhatsApp() {
     </div>
 </div>
 
-<!-- SCRIPT DI LOGICA (Aggiungilo in fondo alla pagina) -->
-<script>
-function checkRimodulazione(months, element) {
-    // Reset stili bottoni
-    document.querySelectorAll('.month-btn').forEach(btn => {
-        btn.classList.remove('border-energyOrange', 'text-energyOrange', 'bg-energyOrange/5');
-        btn.classList.add('border-slate-800', 'text-slate-300', 'bg-energyBgDark');
-    });
-    
-    // Evidenzia bottone cliccato
-    element.classList.remove('border-slate-800', 'text-slate-300', 'bg-energyBgDark');
-    element.classList.add('border-energyOrange', 'text-energyOrange', 'bg-energyOrange/5');
-
-    const box = document.getElementById('radarResultBox');
-    const badge = document.getElementById('radarBadge');
-    const text = document.getElementById('radarText');
-    const btn = document.getElementById('radarActionBtn');
-
-    box.classList.remove('hidden');
-
-    if (months === 6) {
-        box.className = "mt-6 p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-center";
-        badge.className = "text-xs font-black text-emerald-400 uppercase tracking-wider";
-        badge.innerText = "🟢 ZONA SICURA (PER ORA)";
-        text.innerHTML = "Se hai firmato una tariffa fissa di recente sei coperto. Ma attenzione: tieni d'occhio le comunicazioni scritte in fondo alla bolletta intorno al 10° mese.";
-        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20cambiato%20fornitore%20da%20meno%20di%206%20mesi%20ma%20vorrei%20comunque%20capire%20se%20la%20mia%20tariffa%20è%20davvero%20buona.";
-    } else if (months === 12) {
-        box.className = "mt-6 p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl text-center";
-        badge.className = "text-xs font-black text-amber-400 uppercase tracking-wider";
-        badge.innerText = "🟡 RISCHIO MODERATO";
-        text.innerHTML = "Sei esattamente nella finestra di transizione. Molti fornitori modificano le condizioni economiche allo scadere del 12° mese senza inviare SMS o email evidenti.";
-        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20questo%20fornitore%20da%20circa%20un%20anno.%20Mi%20aiuteresti%20a%20capire%20se%20mi%20hanno%20già%20alzato%20il%20prezzo?";
-   } else {
-        box.className = "mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-center";
-        badge.className = "text-xs font-black text-energyRed uppercase tracking-wider animate-pulse";
-        badge.innerText = "🔴 ALTO RISCHIO RIMODULAZIONE";
-        text.innerHTML = "Alla scadenza delle condizioni economiche, alcuni contratti possono prevedere nuove condizioni o variazioni di prezzo. Conviene verificare sempre la propria offerta e le comunicazioni ricevute.";
-        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20lo%20stesso%20fornitore%20da%20più%20di%20un%20anno.%20Vorrei%20verificare%20se%20ho%20subito%20rimodulazioni.";
-    }
-}
-</script>
-
 <!-- SOS SMASCHERATORE TRUFFE -->
 <section class="py-16 bg-energyBgDark/60 border-t border-b border-slate-900">
     <div class="max-w-4xl mx-auto px-6">
@@ -1894,57 +1810,6 @@ function checkScamAnswer(type) {
         </div>
     </div>
 </section>
-
-    <!-- CHAT IN TEMPO REALE -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-        
-        <div id="waChatBox" class="hidden w-[360px] max-w-[calc(100vw-2rem)] bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-energyCard transition-all duration-300 scale-95 origin-bottom-right flex-col">
-            <!-- Header Finestra Chat -->
-            <div class="bg-gradient-to-r from-energyBgDark to-energyCard p-4 text-white flex items-center justify-between border-b border-slate-800">
-                <div class="flex items-center gap-3">
-                    <div class="relative w-10 h-10 rounded-full bg-gradient-to-tr from-energyOrange to-techCyan p-[1px] flex items-center justify-center">
-                        <div class="w-full h-full bg-energyBgDark rounded-full flex items-center justify-center font-bold text-sm">
-                            LS
-                        </div>
-                        <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 border-2 border-slate-900 rounded-full animate-pulse"></span>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-sm leading-tight text-white">Luca Staurenghi</h4>
-                        <span class="text-[11px] text-energyGreen flex items-center gap-1 font-medium">
-                            Online • Assistenza Diretta
-                        </span>
-                    </div>
-                </div>
-                <button id="closeWaBtn" class="p-1 rounded-full hover:bg-slate-800 text-slate-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-
-            <!-- Corpo Chat -->
-            <div id="chatMessages" class="p-4 h-[280px] overflow-y-auto space-y-4 bg-slate-950 chat-scrollbar flex flex-col justify-end">
-                <div class="flex items-start gap-2 max-w-[85%] self-start">
-                    <div class="bg-energyCard text-slate-100 p-3 rounded-2xl rounded-tl-none text-xs leading-relaxed shadow-lg">
-                        Ciao! Sono Luca Staurenghi. 💡 Scrivi pure qui la tua richiesta o dubbio su bollette, contratti o tariffe Wi-Fi. Ti risponderò il prima possibile direttamente sullo schermo!
-                        <span class="block text-right text-[9px] text-slate-400 mt-1">Adesso</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Input Messaggio -->
-            <div class="p-3 bg-slate-900 border-t border-slate-800 flex items-center gap-2">
-                <input id="waInput" type="text" placeholder="Scrivi un messaggio..." class="flex-1 px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-full text-xs text-white placeholder-slate-500 focus:outline-none focus:border-energyOrange focus:bg-slate-950 transition-all">
-                <button id="sendWaBtn" class="w-10 h-10 bg-energyOrange hover:bg-orange-600 text-energyBgDark rounded-full flex items-center justify-center shadow-md active:scale-95 transition-all">
-                    <i data-lucide="send" class="w-4 h-4 ml-0.5"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Pulsante Fluttuante Principale -->
-        <button id="waTrigger" class="w-16 h-16 bg-energyOrange text-energyBgDark rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 relative group">
-            <span class="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full text-[10px] font-bold flex items-center justify-center text-white animate-pulse">1</span>
-            <i data-lucide="message-square-text" class="w-8 h-8"></i>
-        </button>
-    </div>
 
   <!-- FOOTER -->
 <footer class="border-t border-slate-900 bg-energyBgDark py-12 text-slate-400 text-sm">
@@ -2265,7 +2130,7 @@ function checkScamAnswer(type) {
         });
     </script>
 
-    <!-- SISTEMA 3D CON PARTICELLE ENERGETICHE (THREE.JS) -->
+<!-- SISTEMA 3D CON PARTICELLE ENERGETICHE (THREE.JS) -->
     <script>
         let scene, camera, renderer, particleSystem;
         let mouseX = 0, mouseY = 0;
@@ -2413,7 +2278,6 @@ function checkScamAnswer(type) {
         }
     }
     </script>
-</body>
 <script>
 const TELEGRAM_TOKEN = "8846889230:AAEgE-2B-On_V-GKDVx_ywWcOa9ZH9WNqFo"; // Metti qui il token di BotFather
 const TELEGRAM_CHAT_ID = "8232121388";
@@ -2575,17 +2439,9 @@ async function inviaNotificaLead(evento, tipoForm) {
         </div>
     </div>
 </section>
-
-<!-- FLOATING CTA WIDGET (Fisso in basso a destra) -->
-<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-    <!-- Tooltip promozionale fluttuante (visibile su desktop) -->
-    <div class="hidden md:flex items-center gap-2 bg-slate-900/90 backdrop-blur border border-emerald-500/30 text-slate-200 text-xs py-2 px-3 rounded-xl shadow-2xl animate-bounce">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Hai una bolletta da verificare? <strong>Scrivimi ora</strong></span>
-    </div>
-
-    <!-- Pulsante WhatsApp con effetto Glow -->
-    <a href="https://wa.me/393513360251?text=Ciao%20Luca,%20vorrei%20un'analisi%20gratuita%20delle%20mie%20utenze." 
+    
+<!-- Pulsante WhatsApp con effetto Glow -->
+    <a href="https://wa.me/393277545377?text=Ciao%20Luca,%20vorrei%20un'analisi%20gratuita%20delle%20mie%20utenze." 
        target="_blank" 
        rel="noopener noreferrer"
        class="relative group bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-lg shadow-emerald-500/20 transition-all duration-300 hover:scale-110 flex items-center justify-center">
@@ -2648,59 +2504,127 @@ function toggleFaq(index) {
 }
 let modalShown = false;
 
-// 1. LOGICA DESKTOP (Mouse leave)
-document.addEventListener('mouseleave', function(e) {
-    if (e.clientY < 20 && !modalShown) {
-        openExitModal();
-    }
-});
+<!-- SCRIPT DI LOGICA (Aggiungilo in fondo alla pagina) -->
+<script>
+function checkRimodulazione(months, element) {
+    // Reset stili bottoni
+    document.querySelectorAll('.month-btn').forEach(btn => {
+        btn.classList.remove('border-energyOrange', 'text-energyOrange', 'bg-energyOrange/5');
+        btn.classList.add('border-slate-800', 'text-slate-300', 'bg-energyBgDark');
+    });
+    
+    // Evidenzia bottone cliccato
+    element.classList.remove('border-slate-800', 'text-slate-300', 'bg-energyBgDark');
+    element.classList.add('border-energyOrange', 'text-energyOrange', 'bg-energyOrange/5');
 
-// 2. LOGICA MOBILE (Scroll Up)
-let lastScrollY = window.scrollY;
-window.addEventListener('scroll', function() {
-    if (!modalShown) {
-        // Se l'utente scorre verso l'alto di almeno 100px velocemente
-        if (window.scrollY < lastScrollY - 100) {
-            openExitModal();
+    const box = document.getElementById('radarResultBox');
+    const badge = document.getElementById('radarBadge');
+    const text = document.getElementById('radarText');
+    const btn = document.getElementById('radarActionBtn');
+
+    box.classList.remove('hidden');
+
+    if (months === 6) {
+        box.className = "mt-6 p-4 bg-emerald-500/5 border border-emerald-500/20 rounded-xl text-center";
+        badge.className = "text-xs font-black text-emerald-400 uppercase tracking-wider";
+        badge.innerText = "🟢 ZONA SICURA (PER ORA)";
+        text.innerHTML = "Se hai firmato una tariffa fissa di recente sei coperto. Ma attenzione: tieni d'occhio le comunicazioni scritte in fondo alla bolletta intorno al 10° mese.";
+        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20cambiato%20fornitore%20da%20meno%20di%206%20mesi%20ma%20vorrei%20comunque%20capire%20se%20la%20mia%20tariffa%20è%20davvero%20buona.";
+    } else if (months === 12) {
+        box.className = "mt-6 p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl text-center";
+        badge.className = "text-xs font-black text-amber-400 uppercase tracking-wider";
+        badge.innerText = "🟡 RISCHIO MODERATO";
+        text.innerHTML = "Sei esattamente nella finestra di transizione. Molti fornitori modificano le condizioni economiche allo scadere del 12° mese senza inviare SMS o email evidenti.";
+        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20questo%20fornitore%20da%20circa%20un%20anno.%20Mi%20aiuteresti%20a%20capire%20se%20mi%20hanno%20già%20alzato%20il%20prezzo?";
+   } else {
+        box.className = "mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-center";
+        badge.className = "text-xs font-black text-energyRed uppercase tracking-wider animate-pulse";
+        badge.innerText = "🔴 ALTO RISCHIO RIMODULAZIONE";
+        text.innerHTML = "Alla scadenza delle condizioni economiche, alcuni contratti possono prevedere nuove condizioni o variazioni di prezzo. Conviene verificare sempre la propria offerta e le comunicazioni ricevute.";
+        btn.href = "https://wa.me/393277545377?text=Ciao%20Luca,%20ho%20lo%20stesso%20fornitore%20da%20più%20di%20un%20anno.%20Vorrei%20verificare%20se%20ho%20subito%20rimodulazioni.";
+    }
+}
+</script>
+<!-- SCRIPT EXIT INTENT MODAL + MENU MOBILE -->
+    <script>
+        // Stato del modal
+        let modalShown = false;
+
+        // 1. LOGICA DESKTOP (Mouse leave)
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY < 20 && !modalShown) {
+                openExitModal();
+            }
+        });
+
+        // 2. LOGICA MOBILE (Scroll Up)
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', function() {
+            if (!modalShown) {
+                if (window.scrollY < lastScrollY - 100) {
+                    openExitModal();
+                }
+            }
+            lastScrollY = window.scrollY;
+        }, { passive: true });
+
+        // 3. LOGICA DI SICUREZZA (Timer 45 secondi)
+        setTimeout(() => {
+            if (!modalShown) {
+                openExitModal();
+            }
+        }, 45000); 
+
+        function openExitModal() {
+            if (modalShown) return;
+            
+            const modal = document.getElementById('exitModal');
+            const card = document.getElementById('exitCard');
+            
+            if (modal && card) {
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+                modalShown = true;
+            }
         }
-    }
-    lastScrollY = window.scrollY;
-}, { passive: true });
 
-// 3. LOGICA DI SICUREZZA (Time based)
-// Se l'utente sta leggendo da 45 secondi, mostra comunque l'offerta
-setTimeout(() => {
-    if (!modalShown) {
-        openExitModal();
-    }
-}, 45000); 
+        function closeExitModal() {
+            const modal = document.getElementById('exitModal');
+            const card = document.getElementById('exitCard');
+            
+            if (modal && card) {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                card.classList.remove('scale-100');
+                card.classList.add('scale-95');
+            }
+        }
 
-function openExitModal() {
-    if (modalShown) return; // Previene riaperture multiple
-    
-    const modal = document.getElementById('exitModal');
-    const card = document.getElementById('exitCard');
-    
-    if (modal && card) {
-        modal.classList.remove('opacity-0', 'pointer-events-none');
-        card.classList.remove('scale-95');
-        card.classList.add('scale-100');
-        modalShown = true;
-    }
-}
+        // 4. LOGICA MENU MOBILE (Hamburger)
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
 
-function closeExitModal() {
-    const modal = document.getElementById('exitModal');
-    const card = document.getElementById('exitCard');
-    
-    if (modal && card) {
-        modal.classList.add('opacity-0', 'pointer-events-none');
-        card.classList.remove('scale-100');
-        card.classList.add('scale-95');
-    }
-}
-element.classList.remove('border-slate-800');
-    }
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        });
+    </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
