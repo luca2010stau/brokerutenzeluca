@@ -124,56 +124,64 @@
         </div>
     </section>
 
-<!-- MODULO AMMINISTRATORI CONDOMINIO -->
-<div class="relative w-full flex-1 rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8">
-    <div class="mb-6 text-center sm:text-left">
-        <span class="text-powerYellow text-xs font-bold uppercase tracking-widest">Servizio Condomini</span>
-        <h3 class="text-xl font-bold text-white mt-1">Richiedi Analisi Portafoglio Condomini</h3>
+<!-- Colonna Modulo Netlify Amministratori Condominio Sistemata (5/12) -->
+<div class="lg:col-span-5 relative w-full rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
+    <div>
+        <div class="mb-6 text-center sm:text-left">
+            <span class="text-powerYellow text-xs font-bold uppercase tracking-widest">Servizio Condomini</span>
+            <h3 class="text-xl font-bold text-white mt-1">Richiedi Analisi Portafoglio Condomini</h3>
+        </div>
+
+        <!-- FORM CONFIGURATO PER NETLIFY CON NOME UNIVOCO CONDOMINI -->
+        <form name="Analisi-Condomini" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
+            
+            <!-- PARAMETRO STRUTTURALE DI RICONOSCIMENTO PER NETLIFY -->
+            <input type="hidden" name="form-name" value="Analisi-Condomini" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome / Studio</label>
+                    <input type="text" name="Nome_Studio" placeholder="Studio Rossi Amministrazioni" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
+                    <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Studio</label>
+                    <input type="email" name="Email" placeholder="info@studiorossi.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Numero Condomini Gestiti</label>
+                    <select name="Numero_Condomini" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-powerYellow">
+                        <option>1 - 5 Condomini</option>
+                        <option>6 - 15 Condomini</option>
+                        <option>16 - 30 Condomini</option>
+                        <option>Oltre 30 Condomini</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- SEZIONE CARICAMENTO BOLLETTE CONDOMINIALI FUNZIONANTE -->
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bollette Condominiali (PDF o ZIP)</label>
+                <div onclick="document.getElementById('file-input-condomini').click()" class="border-2 border-dashed border-slate-800 hover:border-powerYellow/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
+                    <i data-lucide="upload-cloud" class="w-6 h-6 text-powerYellow mx-auto mb-1"></i>
+                    <p id="file-label-condomini" class="text-xs text-slate-400">Trascina le bollette oppure <span class="text-powerYellow underline">sfoglia</span></p>
+                    <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, ZIP, JPG, PNG (Max 15MB)</span>
+                    
+                    <input type="file" id="file-input-condomini" name="Allegato" required class="hidden" onchange="if(this.files.length > 0) { document.getElementById('file-label-condomini').innerText = this.files[0].name; }">
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-powerYellow hover:bg-yellow-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-powerYellow/20 transition text-sm">
+                Invia Richiesta Analisi Condomini
+            </button>
+        </form>
     </div>
-
-    <form onsubmit="inviaNotificaLead(event, 'Condomini')" class="space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome / Studio</label>
-                <input type="text" name="Nome_Studio" placeholder="Studio Rossi Amministrazioni" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
-                <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Email Studio</label>
-                <input type="email" name="Email" placeholder="info@studiorossi.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-powerYellow">
-            </div>
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Numero Condomini Gestiti</label>
-                <select name="Numero_Condomini" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-powerYellow">
-                    <option>1 - 5 Condomini</option>
-                    <option>6 - 15 Condomini</option>
-                    <option>16 - 30 Condomini</option>
-                    <option>Oltre 30 Condomini</option>
-                </select>
-            </div>
-        </div>
-
-        <div>
-            <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bollette Condominiali (PDF o ZIP)</label>
-            <div onclick="document.getElementById('file-input-condomini').click()" class="border-2 border-dashed border-slate-800 hover:border-powerYellow/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
-                <i data-lucide="upload-cloud" class="w-6 h-6 text-powerYellow mx-auto mb-1"></i>
-                <p id="file-label-condomini" class="text-xs text-slate-400">Trascina le bollette oppure <span class="text-powerYellow underline">sfoglia</span></p>
-                <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, ZIP, JPG, PNG (Max 15MB)</span>
-                
-                <input type="file" id="file-input-condomini" name="Allegato" class="hidden" onchange="aggiornaNomeFile(this, 'file-label-condomini')">
-            </div>
-        </div>
-
-        <button type="submit" class="w-full py-3.5 bg-powerYellow hover:bg-yellow-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-powerYellow/20 transition text-sm">
-            Invia Richiesta Analisi Condomini
-        </button>
-    </form>
 
     <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
         <i data-lucide="shield-check" class="w-4 h-4 text-powerYellow flex-shrink-0"></i>
