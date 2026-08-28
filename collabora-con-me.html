@@ -67,26 +67,23 @@
         </div>
     </section>
 
-  <!-- MODULO NETLIFY RICHIESTA COLLABORAZIONE OTTIMIZZATO -->
+<!-- MODULO NETLIFY RICHIESTA COLLABORAZIONE CON DOMANDA DINAMICA -->
 <section class="py-20 bg-energyBgDark relative z-20">
     <div class="max-w-3xl mx-auto px-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
         <h2 class="text-2xl font-bold text-white text-center mb-2">Proponi una Collaborazione</h2>
         <p class="text-slate-400 text-xs text-center mb-6">Compila il modulo sottostante per valutare insieme le modalità operative più adatte alla tua struttura.</p>
         
-        <!-- FORM CONFIGURATO PER NETLIFY CON METODO POST -->
         <form name="Proposta-Collaborazione" method="POST" data-netlify="true" class="space-y-4">
-            
-            <!-- PARAMETRO STRUTTURALE DI RICONOSCIMENTO PER NETLIFY -->
             <input type="hidden" name="form-name" value="Proposta-Collaborazione" />
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome / Referente</label>
-                    <input type="text" name="Nome_Referente" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
+                    <input type="text" name="Nome_Cognome_Collaboratore" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Ragione Sociale / Studio</label>
-                    <input type="text" name="Azienda_Studio" placeholder="Nome Attività / Impresa" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Ragione Sociale / Studio (Opzionale)</label>
+                    <input type="text" name="Azienda_Studio" placeholder="Nome Attività / Impresa" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
                 </div>
             </div>
 
@@ -102,19 +99,39 @@
                     </select>
                 </div>
                 <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Come vuoi collaborare?</label>
+                    <!-- ID aggiunto al select per intercettare il cambio di opzione -->
+                    <select id="select-collaborazione" name="Tipo_Collaborazione" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:border-energyOrange focus:outline-none">
+                        <option>Segnalatore</option>
+                        <option>Subagente (Broker)</option>
+                        <option>Segnalatore Occasionale</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- DOMANDA CONDIZIONALE: Scomparsa di default (classe hidden) -->
+            <div id="campo-esperienza" class="hidden transition-all duration-300">
+                <label class="block text-xs font-semibold text-energyOrange mb-1">Hai mai svolto lavori a contatto col pubblico?</label>
+                <select name="Esperienza_Pubblico" class="w-full bg-slate-950 border border-energyOrange rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none">
+                    <option value="Sì, ho esperienza">Sì, ho già esperienza a contatto col pubblico</option>
+                    <option value="No, prima volta">No, non ho mai fatto questo tipo di lavori</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
                     <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
                     <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+                    <input type="email" name="Email" placeholder="info@tuaazienda.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
                 </div>
             </div>
 
             <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Email Aziendale</label>
-                <input type="email" name="Email" placeholder="info@tuaazienda.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none">
-            </div>
-
-            <div>
                 <label class="block text-xs font-semibold text-slate-300 mb-1">Dettagli o Messaggio</label>
-                <textarea name="Messaggio" rows="3" placeholder="Indica la zona operativa o il tipo di servizio a cui sei interessato..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none"></textarea>
+                <textarea name="Messaggio" rows="3" placeholder="Indica la tua zona operativa o descrivi brevemente la tua proposta..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-energyOrange focus:outline-none"></textarea>
             </div>
 
             <button type="submit" class="w-full py-3.5 bg-energyOrange hover:bg-amber-500 text-slate-950 font-bold rounded-xl shadow-lg shadow-energyOrange/20 transition text-sm">
@@ -123,8 +140,23 @@
         </form>
     </div>
 </section>
+<!-- SCRIPT JAVASCRIPT PER MOSTRARE/NASCONDERE LA DOMANDA IN BASE ALLA SCELTA -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const selectCollab = document.getElementById("select-collaborazione");
+        const campoEsperienza = document.getElementById("campo-esperienza");
 
-    <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
+        selectCollab.addEventListener("change", function () {
+            // Se seleziona Subagente (Broker) mostra il campo, altrimenti lo nasconde
+            if (this.value === "Subagente (Broker)") {
+                campoEsperienza.classList.remove("hidden");
+            } else {
+                campoEsperienza.classList.add("hidden");
+            }
+        });
+    });
+</script>
+<script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
   <!-- SCRIPT INVIO TELEGRAM + NETLIFY COLLABORA CON ME -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
