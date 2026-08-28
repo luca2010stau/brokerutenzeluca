@@ -72,20 +72,36 @@
         </div>
     </section>
 
-    <!-- MODULO NETLIFY RICHIESTA EFFICIENTAMENTO -->
-    <section id="prenota" class="py-20 bg-energyBgDark">
-        <div class="max-w-3xl mx-auto px-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
-            <h2 class="text-2xl font-bold text-white text-center mb-2">Richiedi uno Studio di Fattibilità Gratuito o di un soppraluogo</h2>
-            <p class="text-slate-400 text-xs text-center mb-6">Compila il modulo per analizzare la fattibilità dell'impianto o degli interventi di efficientamento.</p>
+<!-- MODULO NETLIFY RICHIESTA EFFICIENTAMENTO OTTIMIZZATO -->
+<section id="prenota" class="py-20 bg-energyBgDark relative z-20">
+    <div class="max-w-3xl mx-auto px-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl">
+        <h2 class="text-2xl font-bold text-white text-center mb-2">Richiedi uno Studio di Fattibilità Gratuito o un Sopralluogo</h2>
+        <p class="text-slate-400 text-xs text-center mb-6">Compila il modulo per analizzare la fattibilità dell'impianto o degli interventi di efficientamento.</p>
+        
+        <!-- FORM CONFIGURATO PER NETLIFY CON METODO POST -->
+        <form name="Richiesta-Efficientamento" method="POST" data-netlify="true" class="space-y-4">
             
-      <form id="form-efficientamento" name="Richiesta-Efficientamento" method="POST" data-netlify="true" class="space-y-4">
-                <input type="hidden" name="form-name" value="Richiesta-Efficientamento" />
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input type="text" name="Nome_Cognome" placeholder="Nome e Cognome" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
-                    <input type="tel" name="Telefono" placeholder="Telefono / WhatsApp" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+            <!-- PARAMETRO STRUTTURALE DI RICONOSCIMENTO PER NETLIFY -->
+            <input type="hidden" name="form-name" value="Richiesta-Efficientamento" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Nome e Cognome</label>
+                    <input type="text" name="Nome_Cognome" placeholder="Mario Rossi" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <input type="email" name="Email" placeholder="Email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / WhatsApp</label>
+                    <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email</label>
+                    <input type="email" name="Email" placeholder="mario.rossi@email.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Intervento di Interesse</label>
                     <select name="Intervento_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:border-emerald-500 focus:outline-none">
                         <option>Fotovoltaico / Accumulo</option>
                         <option>Pompa di Calore</option>
@@ -93,11 +109,19 @@
                         <option>Valutazione Completa</option>
                     </select>
                 </div>
-                <textarea name="Note" rows="3" placeholder="Descrivi brevemente l'immobile o la tua esigenza" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none"></textarea>
-                <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl transition text-sm">Richiedi Contatto Professionale</button>
-            </form>
-        </div>
-    </section>
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Note o Esigenze Particolari</label>
+                <textarea name="Note" rows="3" placeholder="Descrivi brevemente l'immobile o la tua esigenza..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:border-emerald-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-emerald-500/20 transition text-sm">
+                Richiedi Contatto Professionale
+            </button>
+        </form>
+    </div>
+</section>
 
     <script>if (typeof lucide !== 'undefined') { lucide.createIcons(); }</script>
 <!-- SCRIPT INVIO TELEGRAM + NETLIFY EFFICIENTAMENTO -->
