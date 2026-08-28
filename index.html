@@ -2626,5 +2626,34 @@ function checkRimodulazione(months, element) {
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<!-- CHAT LIVE IN REAL-TIME COLLEGATA A TELEGRAM (INTERGRAM) -->
+<script>
+    // Il tuo Chat ID inserito e configurato
+    window.intergramId = "8232121388";
+    
+    // Configurazione grafica personalizzata
+    window.intergramCustomizations = {
+        titleClosed: 'Chatta con Luca Live',
+        titleOpen: 'Consulenza Energetica H24',
+        introMessage: 'Ciao! Sono Luca. Come posso aiutarti con le tue utenze oggi?',
+        mainColor: '#10b981', // Bellissimo verde smeraldo abbinato al tuo sito BrokerUtenze
+        alwaysUseFloatingButton: true
+    };
+</script>
+
+<!-- Stile CSS per bloccare il widget a SINISTRA fluttuante -->
+<style>
+    #intergramChatWindow {
+        left: 20px !important;
+        right: auto !important;
+    }
+    .intergram-chat-button {
+        left: 20px !important;
+        right: auto !important;
+    }
+</style>
+
+<!-- Script ufficiale del widget che carica la chat sul sito -->
+<script id="intergram" type="text/javascript" src="https://intergram.xyz"></script>
 </body>
 </html>
