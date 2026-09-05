@@ -2,254 +2,1313 @@
 <html lang="it" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulenza Utenze Business & Partite IVA | BrokerUtenzeLuca</title>
-    <meta name="description" content="Ottimizzazione utenze per aziende, negozi e partite IVA. Luce, gas, fibra aziendale e sistemi di allarme con un unico consulente dedicato.">
-    
-    <!-- Tailwind CSS CDN -->
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- =========================================================
+         SEO PRINCIPALE
+    ========================================================== -->
+
+    <title>
+        Consulenza Utenze Aziendali | Luce, Gas, Fibra e Sicurezza | BrokerUtenzeLuca
+    </title>
+
+    <meta
+        name="description"
+        content="Consulenza per aziende, negozi, professionisti e Partite IVA: analisi bollette luce e gas, ottimizzazione dei costi, fibra business, telefonia e sistemi di sicurezza."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
+        name="author"
+        content="Broker Utenze Luca"
+    >
+
+    <link
+        rel="canonical"
+        href="https://analisi-bolletta-gratuita.it/"
+    >
+
+    <meta
+        name="language"
+        content="Italian"
+    >
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="Consulenza Utenze Aziendali | BrokerUtenzeLuca"
+    >
+
+    <meta
+        property="og:description"
+        content="Analisi e ottimizzazione delle utenze per aziende, negozi, professionisti e Partite IVA."
+    >
+
+    <meta
+        property="og:url"
+        content="https://analisi-bolletta-gratuita.it/"
+    >
+
+    <meta
+        property="og:site_name"
+        content="BrokerUtenzeLuca"
+    >
+
+    <meta
+        property="og:locale"
+        content="it_IT"
+    >
+
+    <meta
+        property="og:image"
+        content="https://analisi-bolletta-gratuita.it/assets/og-business.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="BrokerUtenzeLuca - Consulenza utenze aziendali"
+    >
+
+    <!-- =========================================================
+         TWITTER / X
+    ========================================================== -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta
+        name="twitter:title"
+        content="Consulenza Utenze Aziendali | BrokerUtenzeLuca"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Consulenza e analisi per luce, gas, fibra, telefonia e sicurezza aziendale."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://analisi-bolletta-gratuita.it/assets/og-business.jpg"
+    >
+
+    <!-- =========================================================
+         GEO / LINGUA
+    ========================================================== -->
+
+    <meta
+        name="geo.region"
+        content="IT"
+    >
+
+    <!-- =========================================================
+         PERFORMANCE / RISORSE
+    ========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://cdn.tailwindcss.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://unpkg.com"
+    >
+
+    <!-- =========================================================
+         TAILWIND
+    ========================================================== -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
+
+    <!-- =========================================================
+         LUCIDE ICONS
+    ========================================================== -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Schema.org B2B Corporate Services -->
+    <!-- =========================================================
+         SCHEMA.ORG
+         ORGANIZATION + WEBSITE + WEBPAGE + SERVICE + PERSON
+    ========================================================== -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Business Energy & Telecom Consultancy",
-      "provider": {
-        "@type": "ProfessionalService",
-        "name": "Broker Utenze Luca",
-        "url": "https://analisi-bolletta-gratuita.it/"
-      },
-      "areaServed": "Italy",
-      "description": "Consulenza indipendente per aziende, partite IVA e attività commerciali su energia, gas, telecomunicazioni e sistemi di allarme."
+      "@graph": [
+
+        {
+          "@type": "Organization",
+          "@id": "https://analisi-bolletta-gratuita.it/#organization",
+          "name": "Broker Utenze Luca",
+          "url": "https://analisi-bolletta-gratuita.it/",
+          "description": "Consulenza per aziende, negozi, professionisti e Partite IVA su energia, gas, connettività, telefonia e sicurezza.",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Italia"
+          }
+        },
+
+        {
+          "@type": "Person",
+          "@id": "https://analisi-bolletta-gratuita.it/#luca",
+          "name": "Luca",
+          "jobTitle": "Consulente utenze aziendali",
+          "worksFor": {
+            "@id": "https://analisi-bolletta-gratuita.it/#organization"
+          }
+        },
+
+        {
+          "@type": "WebSite",
+          "@id": "https://analisi-bolletta-gratuita.it/#website",
+          "url": "https://analisi-bolletta-gratuita.it/",
+          "name": "BrokerUtenzeLuca",
+          "inLanguage": "it-IT",
+          "publisher": {
+            "@id": "https://analisi-bolletta-gratuita.it/#organization"
+          }
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "https://analisi-bolletta-gratuita.it/#webpage",
+          "url": "https://analisi-bolletta-gratuita.it/",
+          "name": "Consulenza Utenze Aziendali",
+          "description": "Consulenza e analisi delle utenze per aziende, negozi, professionisti e Partite IVA.",
+          "inLanguage": "it-IT",
+          "isPartOf": {
+            "@id": "https://analisi-bolletta-gratuita.it/#website"
+          },
+          "about": {
+            "@id": "https://analisi-bolletta-gratuita.it/#organization"
+          },
+          "mainEntity": {
+            "@id": "https://analisi-bolletta-gratuita.it/#business-service"
+          }
+        },
+
+        {
+          "@type": "Service",
+          "@id": "https://analisi-bolletta-gratuita.it/#business-service",
+          "name": "Consulenza Utenze Business",
+          "serviceType": [
+            "Consulenza energia aziendale",
+            "Consulenza gas aziendale",
+            "Analisi bollette aziendali",
+            "Fibra Business",
+            "Telefonia aziendale",
+            "Sistemi di sicurezza"
+          ],
+          "provider": {
+            "@id": "https://analisi-bolletta-gratuita.it/#organization"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Italia"
+          },
+          "description": "Analisi delle utenze aziendali e supporto nella valutazione di soluzioni per energia, gas, connettività, telefonia e sicurezza.",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": [
+              "Aziende",
+              "PMI",
+              "Partite IVA",
+              "Professionisti",
+              "Negozi",
+              "Attività commerciali"
+            ]
+          }
+        }
+
+      ]
     }
     </script>
+
 </head>
+
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
 
-    <!-- NAV BAR -->
-    <header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="/" class="text-xl font-extrabold text-white tracking-tight">
+    <!-- =========================================================
+         HEADER / NAVIGATION
+    ========================================================== -->
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800"
+    >
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        >
+
+            <a
+                href="/"
+                aria-label="BrokerUtenzeLuca - Home"
+                class="text-xl font-extrabold text-white tracking-tight"
+            >
                 Broker<span class="text-emerald-400">UtenzeLuca</span>
-                <span class="ml-2 text-xs font-normal text-cyan-400 border border-cyan-500/30 px-2 py-0.5 rounded-full">Business & P.IVA</span>
+
+                <span
+                    class="ml-2 text-xs font-normal text-cyan-400 border border-cyan-500/30 px-2 py-0.5 rounded-full"
+                >
+                    Business & P.IVA
+                </span>
             </a>
-            <div class="flex items-center gap-4">
-                <a href="/" class="text-sm font-medium text-slate-400 hover:text-white transition">← Home</a>
-                <a href="#form-business" class="px-4 py-2 text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg transition shadow-md shadow-emerald-500/20">
-                    Analisi Gratuita Azienda
+
+            <nav
+                aria-label="Navigazione principale"
+                class="flex items-center gap-4"
+            >
+
+                <a
+                    href="/"
+                    class="hidden sm:block text-sm font-medium text-slate-400 hover:text-white transition"
+                >
+                    ← Home
                 </a>
-            </div>
+
+                <a
+                    href="#form-business"
+                    class="px-4 py-2 text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg transition shadow-md shadow-emerald-500/20"
+                >
+                    Analisi Gratuita
+                </a>
+
+            </nav>
+
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="pt-32 pb-20 relative overflow-hidden bg-slate-950">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.15),rgba(255,255,255,0))]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6">
-                <i data-lucide="briefcase" class="w-4 h-4"></i> Soluzioni per Negozi, Professionisti e PMI
-            </span>
 
-            <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
-                Taglia i Costi Fissi della Tua Attività <br class="hidden sm:inline"/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">Senza Sprecare Tempo tra i Call Center</span>
-            </h1>
+    <!-- =========================================================
+         MAIN
+    ========================================================== -->
 
-            <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto">
-                Analisi completa dei consumi aziendali, verifica di aliquote IVA e accise agevolate, e fornitura di connettività ultraveloce e sistemi di allarme professionali.
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            id="hero"
+            aria-labelledby="hero-title"
+            class="pt-32 pb-20 relative overflow-hidden bg-slate-950"
+        >
+
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.15),rgba(255,255,255,0))]"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+            >
+
+                <span
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6"
+                >
+                    <i data-lucide="briefcase" class="w-4 h-4" aria-hidden="true"></i>
+
+                    Soluzioni per Negozi, Professionisti e PMI
+                </span>
+
+
+                <h1
+                    id="hero-title"
+                    class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight"
+                >
+                    Consulenza Utenze Aziendali per Ridurre i Costi della Tua Attività
+
+                    <br class="hidden sm:inline">
+
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400"
+                    >
+                        Luce, Gas, Fibra e Servizi Business
+                    </span>
+                </h1>
+
+
+                <p
+                    class="mt-6 text-lg text-slate-400 max-w-3xl mx-auto leading-8"
+                >
+                    Analizziamo le utenze della tua azienda, negozio o Partita IVA
+                    per individuare costi, condizioni della fornitura e possibili
+                    opportunità di ottimizzazione.
+                </p>
+
+
+                <div
+                    class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+                >
+
+                    <a
+                        href="#form-business"
+                        class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-base shadow-lg shadow-cyan-500/20 transition-all"
+                    >
+                        Richiedi Analisi Gratuita
+                    </a>
+
+
+                    <a
+                        href="https://wa.me/393277545377?text=Ciao%20Luca%2C%20vorrei%20valutare%20le%20utenze%20della%20mia%20azienda."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-500/50 text-white font-semibold text-base transition flex items-center justify-center gap-2"
+                    >
+
+                        <i
+                            data-lucide="message-square"
+                            class="w-5 h-5 text-cyan-400"
+                            aria-hidden="true"
+                        ></i>
+
+                        WhatsApp Business
+
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             SERVIZI
+        ====================================================== -->
+
+        <section
+            id="servizi"
+            aria-labelledby="servizi-title"
+            class="py-20 bg-slate-900/50 border-y border-slate-800"
+        >
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+
+                <div class="text-center max-w-3xl mx-auto mb-16">
+
+                    <span
+                        class="text-cyan-400 text-xs font-bold uppercase tracking-widest"
+                    >
+                        Servizi Business
+                    </span>
+
+                    <h2
+                        id="servizi-title"
+                        class="mt-2 text-3xl sm:text-4xl font-extrabold text-white"
+                    >
+                        Un unico consulente per le utenze della tua impresa
+                    </h2>
+
+                    <p class="mt-4 text-slate-400 leading-7">
+                        Energia, gas, connettività e sicurezza possono essere
+                        valutati all'interno di un'unica analisi.
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <article
+                        class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-5"
+                        >
+                            <i data-lucide="zap" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            Energia & Gas Business
+                        </h3>
+
+                        <p class="text-sm text-slate-400 leading-6">
+                            Analisi delle forniture di energia elettrica e gas,
+                            dei consumi e delle principali componenti economiche
+                            della bolletta aziendale.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/40 transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-5"
+                        >
+                            <i data-lucide="wifi" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            Fibra & Telefonia Business
+                        </h3>
+
+                        <p class="text-sm text-slate-400 leading-6">
+                            Soluzioni di connettività professionale, fibra,
+                            telefonia aziendale, centralini cloud e possibili
+                            linee di backup per uffici e attività.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-purple-500/40 transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-5"
+                        >
+                            <i data-lucide="shield-check" class="w-6 h-6" aria-hidden="true"></i>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-white mb-2">
+                            Sicurezza & Allarmi
+                        </h3>
+
+                        <p class="text-sm text-slate-400 leading-6">
+                            Soluzioni professionali per la protezione di negozi,
+                            uffici, locali commerciali, magazzini e altre
+                            strutture aziendali.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             COME FUNZIONA
+        ====================================================== -->
+
+        <section
+            id="come-funziona"
+            aria-labelledby="come-funziona-title"
+            class="py-20 bg-slate-950"
+        >
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+
+                <div class="max-w-3xl mx-auto text-center mb-14">
+
+                    <span
+                        class="text-cyan-400 text-xs font-bold uppercase tracking-widest"
+                    >
+                        Come funziona
+                    </span>
+
+                    <h2
+                        id="come-funziona-title"
+                        class="mt-2 text-3xl sm:text-4xl font-extrabold text-white"
+                    >
+                        Analizzare le utenze aziendali è semplice
+                    </h2>
+
+                    <p class="mt-4 text-slate-400 leading-7">
+                        Un processo semplice per comprendere meglio i costi della
+                        tua fornitura e valutare eventuali alternative.
+                    </p>
+
+                </div>
+
+
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <article
+                        class="p-6 rounded-2xl border border-slate-800 bg-slate-900"
+                    >
+                        <span class="text-cyan-400 font-bold text-sm">
+                            01
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-bold text-white">
+                            Invia la bolletta
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            Carica una bolletta recente della tua attività
+                            utilizzando il modulo presente nella pagina.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="p-6 rounded-2xl border border-slate-800 bg-slate-900"
+                    >
+                        <span class="text-emerald-400 font-bold text-sm">
+                            02
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-bold text-white">
+                            Analizziamo i dati
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            Analizziamo consumi, struttura della spesa e
+                            principali condizioni economiche della fornitura.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="p-6 rounded-2xl border border-slate-800 bg-slate-900"
+                    >
+                        <span class="text-purple-400 font-bold text-sm">
+                            03
+                        </span>
+
+                        <h3 class="mt-4 text-xl font-bold text-white">
+                            Valutiamo le opportunità
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            Se emergono opportunità concrete, valutiamo insieme
+                            le possibili soluzioni per la tua attività.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             AREA GEO / KNOWLEDGE
+        ====================================================== -->
+
+        <section
+            id="analisi"
+            aria-labelledby="analisi-title"
+            class="py-20 bg-slate-900/50 border-y border-slate-800"
+        >
+
+            <div
+                class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+
+                <div class="text-center">
+
+                    <span
+                        class="text-emerald-400 text-xs font-bold uppercase tracking-widest"
+                    >
+                        Analisi Utenze Business
+                    </span>
+
+                    <h2
+                        id="analisi-title"
+                        class="mt-2 text-3xl sm:text-4xl font-extrabold text-white"
+                    >
+                        Cosa controllare in una bolletta aziendale?
+                    </h2>
+
+                </div>
+
+
+                <div class="mt-10 grid md:grid-cols-2 gap-6">
+
+                    <article
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6"
+                    >
+
+                        <h3 class="text-lg font-bold text-white">
+                            Costi della fornitura
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            La bolletta può contenere diverse componenti di costo.
+                            Comprendere come sono composte permette di avere una
+                            visione più chiara della spesa energetica dell'attività.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6"
+                    >
+
+                        <h3 class="text-lg font-bold text-white">
+                            Consumi dell'attività
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            I consumi devono essere valutati in relazione al tipo
+                            di attività, agli orari di utilizzo e alle caratteristiche
+                            della struttura.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6"
+                    >
+
+                        <h3 class="text-lg font-bold text-white">
+                            Condizioni economiche
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            Le condizioni economiche della fornitura sono un
+                            elemento importante da considerare quando si valuta
+                            un'offerta alternativa.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="bg-slate-950 border border-slate-800 rounded-2xl p-6"
+                    >
+
+                        <h3 class="text-lg font-bold text-white">
+                            Esigenze specifiche dell'impresa
+                        </h3>
+
+                        <p class="mt-3 text-sm text-slate-400 leading-6">
+                            Un negozio, un ufficio, un ristorante o un'attività
+                            produttiva possono avere esigenze energetiche e
+                            di connettività molto differenti.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             FAQ
+        ====================================================== -->
+
+        <section
+            id="faq"
+            aria-labelledby="faq-title"
+            class="py-20 bg-slate-950"
+        >
+
+            <div
+                class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+
+                <div class="text-center mb-12">
+
+                    <span
+                        class="text-cyan-400 text-xs font-bold uppercase tracking-widest"
+                    >
+                        FAQ
+                    </span>
+
+                    <h2
+                        id="faq-title"
+                        class="mt-2 text-3xl sm:text-4xl font-extrabold text-white"
+                    >
+                        Domande frequenti sulla consulenza aziendale
+                    </h2>
+
+                </div>
+
+
+                <div class="space-y-4">
+
+                    <details
+                        class="group bg-slate-900 border border-slate-800 rounded-xl p-5"
+                    >
+
+                        <summary
+                            class="cursor-pointer font-semibold text-white"
+                        >
+                            Cosa comprende l'analisi di una bolletta aziendale?
+                        </summary>
+
+                        <p class="mt-4 text-sm leading-7 text-slate-400">
+                            L'analisi serve a comprendere la struttura della spesa,
+                            i consumi e le principali condizioni economiche della
+                            fornitura, così da individuare eventuali opportunità
+                            di ottimizzazione.
+                        </p>
+
+                    </details>
+
+
+                    <details
+                        class="group bg-slate-900 border border-slate-800 rounded-xl p-5"
+                    >
+
+                        <summary
+                            class="cursor-pointer font-semibold text-white"
+                        >
+                            La consulenza è rivolta anche alle Partite IVA?
+                        </summary>
+
+                        <p class="mt-4 text-sm leading-7 text-slate-400">
+                            Sì. Il servizio è rivolto a professionisti, negozi,
+                            attività commerciali, uffici, PMI e altre realtà
+                            che utilizzano forniture per esigenze professionali.
+                        </p>
+
+                    </details>
+
+
+                    <details
+                        class="group bg-slate-900 border border-slate-800 rounded-xl p-5"
+                    >
+
+                        <summary
+                            class="cursor-pointer font-semibold text-white"
+                        >
+                            Posso inviare una bolletta per una prima valutazione?
+                        </summary>
+
+                        <p class="mt-4 text-sm leading-7 text-slate-400">
+                            Sì. Puoi utilizzare il modulo di richiesta presente
+                            nella pagina per inviare i dati necessari alla
+                            valutazione.
+                        </p>
+
+                    </details>
+
+
+                    <details
+                        class="group bg-slate-900 border border-slate-800 rounded-xl p-5"
+                    >
+
+                        <summary
+                            class="cursor-pointer font-semibold text-white"
+                        >
+                            Vi occupate anche di fibra e telefonia aziendale?
+                        </summary>
+
+                        <p class="mt-4 text-sm leading-7 text-slate-400">
+                            Sì. È possibile valutare soluzioni di connettività,
+                            fibra, telefonia aziendale, centralini cloud e
+                            sistemi di backup in base alle esigenze dell'attività.
+                        </p>
+
+                    </details>
+
+
+                    <details
+                        class="group bg-slate-900 border border-slate-800 rounded-xl p-5"
+                    >
+
+                        <summary
+                            class="cursor-pointer font-semibold text-white"
+                        >
+                            L'analisi obbliga a cambiare fornitore?
+                        </summary>
+
+                        <p class="mt-4 text-sm leading-7 text-slate-400">
+                            No. L'analisi serve prima di tutto a comprendere
+                            la situazione della fornitura. Eventuali alternative
+                            possono essere valutate successivamente.
+                        </p>
+
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             FORM BUSINESS
+        ====================================================== -->
+
+        <section
+            id="form-business"
+            aria-labelledby="form-title"
+            class="py-20 bg-slate-900/50 border-t border-slate-800"
+        >
+
+            <div
+                class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"
+            >
+
+                <div
+                    class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl"
+                >
+
+                    <div class="p-6 sm:p-10">
+
+                        <div class="mb-8 text-center">
+
+                            <span
+                                class="text-cyan-400 text-xs font-bold uppercase tracking-widest"
+                            >
+                                Analisi Aziendale
+                            </span>
+
+                            <h2
+                                id="form-title"
+                                class="text-2xl sm:text-3xl font-extrabold text-white mt-2"
+                            >
+                                Richiedi l'Analisi delle Tue Utenze
+                            </h2>
+
+                            <p
+                                class="mt-3 text-sm text-slate-400 max-w-2xl mx-auto"
+                            >
+                                Invia i dati della tua attività e, se disponibile,
+                                una bolletta recente. Potremo valutare la situazione
+                                della fornitura e le possibili opportunità.
+                            </p>
+
+                        </div>
+
+
+                        <!-- NETLIFY FORM -->
+
+                        <form
+                            name="Analisi-Business"
+                            method="POST"
+                            data-netlify="true"
+                            netlify-honeypot="bot-field"
+                            enctype="multipart/form-data"
+                            class="space-y-5"
+                        >
+
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="Analisi-Business"
+                            >
+
+
+                            <!-- HONEYPOT -->
+
+                            <p class="hidden">
+                                <label>
+                                    Non compilare questo campo:
+                                    <input
+                                        name="bot-field"
+                                        tabindex="-1"
+                                        autocomplete="off"
+                                    >
+                                </label>
+                            </p>
+
+
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-5"
+                            >
+
+                                <div>
+
+                                    <label
+                                        for="azienda"
+                                        class="block text-xs font-semibold text-slate-300 mb-2"
+                                    >
+                                        Ragione Sociale / Azienda
+                                    </label>
+
+                                    <input
+                                        id="azienda"
+                                        type="text"
+                                        name="Azienda"
+                                        placeholder="Azienda Srl"
+                                        autocomplete="organization"
+                                        required
+                                        class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"
+                                    >
+
+                                </div>
+
+
+                                <div>
+
+                                    <label
+                                        for="telefono"
+                                        class="block text-xs font-semibold text-slate-300 mb-2"
+                                    >
+                                        Telefono / Referente
+                                    </label>
+
+                                    <input
+                                        id="telefono"
+                                        type="tel"
+                                        name="Telefono"
+                                        placeholder="+39 333 0000000"
+                                        autocomplete="tel"
+                                        required
+                                        class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="grid grid-cols-1 sm:grid-cols-2 gap-5"
+                            >
+
+                                <div>
+
+                                    <label
+                                        for="email"
+                                        class="block text-xs font-semibold text-slate-300 mb-2"
+                                    >
+                                        Email Aziendale
+                                    </label>
+
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        name="Email"
+                                        placeholder="contatti@azienda.it"
+                                        autocomplete="email"
+                                        required
+                                        class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-400"
+                                    >
+
+                                </div>
+
+
+                                <div>
+
+                                    <label
+                                        for="servizio"
+                                        class="block text-xs font-semibold text-slate-300 mb-2"
+                                    >
+                                        Servizio di Interesse
+                                    </label>
+
+                                    <select
+                                        id="servizio"
+                                        name="Servizio_Interesse"
+                                        class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-cyan-400"
+                                    >
+
+                                        <option>
+                                            Luce & Gas Business / P.IVA
+                                        </option>
+
+                                        <option>
+                                            Connettività Fibra Business
+                                        </option>
+
+                                        <option>
+                                            Centralini & Telefonia Aziendale
+                                        </option>
+
+                                        <option>
+                                            Efficiency & Fotovoltaico
+                                        </option>
+
+                                        <option>
+                                            Sicurezza & Sistemi di Allarme
+                                        </option>
+
+                                        <option>
+                                            Analisi Generale Utenze
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FILE -->
+
+                            <div>
+
+                                <label
+                                    for="file-input-business"
+                                    class="block text-xs font-semibold text-slate-300 mb-2"
+                                >
+                                    Carica Bolletta Aziendale
+                                </label>
+
+                                <div
+                                    class="border-2 border-dashed border-slate-800 hover:border-cyan-400/50 bg-slate-950 rounded-xl p-6 text-center transition"
+                                >
+
+                                    <i
+                                        data-lucide="upload-cloud"
+                                        class="w-8 h-8 text-cyan-400 mx-auto mb-2"
+                                        aria-hidden="true"
+                                    ></i>
+
+                                    <p
+                                        id="file-label-business"
+                                        class="text-xs text-slate-400"
+                                    >
+                                        Seleziona una bolletta in PDF, JPG o PNG
+                                    </p>
+
+                                    <p
+                                        class="text-[10px] text-slate-600 mt-2"
+                                    >
+                                        Dimensione massima consigliata: 15 MB
+                                    </p>
+
+                                    <input
+                                        type="file"
+                                        id="file-input-business"
+                                        name="Allegato"
+                                        accept=".pdf,.jpg,.jpeg,.png"
+                                        required
+                                        class="mt-4 block w-full text-xs text-slate-400"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CONSENSO / INFORMATIVA -->
+
+                            <div class="flex items-start gap-3">
+
+                                <input
+                                    type="checkbox"
+                                    id="privacy"
+                                    name="Privacy_Accettata"
+                                    value="Si"
+                                    required
+                                    class="mt-1 accent-cyan-500"
+                                >
+
+                                <label
+                                    for="privacy"
+                                    class="text-xs text-slate-500 leading-5"
+                                >
+                                    Dichiaro di aver letto l'informativa privacy
+                                    e autorizzo il trattamento dei dati forniti
+                                    per essere ricontattato in merito alla richiesta.
+                                </label>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="w-full py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-cyan-500/20 transition text-sm"
+                            >
+                                Invia Richiesta Analisi Business
+                            </button>
+
+                        </form>
+
+
+                        <div
+                            class="w-full mt-5 p-3 bg-slate-950/60 rounded-xl border border-slate-800 text-center flex items-center justify-center gap-2 text-xs text-slate-400"
+                        >
+
+                            <i
+                                data-lucide="shield-check"
+                                class="w-4 h-4 text-cyan-400 flex-shrink-0"
+                                aria-hidden="true"
+                            ></i>
+
+                            <span>
+                                I dati vengono utilizzati per gestire la richiesta
+                                di consulenza. Consulta l'informativa privacy
+                                prima dell'invio.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA FINALE
+        ====================================================== -->
+
+        <section
+            aria-labelledby="cta-title"
+            class="py-20 bg-slate-950"
+        >
+
+            <div
+                class="max-w-4xl mx-auto px-4 text-center"
+            >
+
+                <h2
+                    id="cta-title"
+                    class="text-3xl sm:text-4xl font-extrabold text-white"
+                >
+                    Vuoi capire se le tue utenze aziendali possono essere ottimizzate?
+                </h2>
+
+                <p
+                    class="mt-5 text-slate-400 leading-7"
+                >
+                    Invia una bolletta e raccontaci brevemente le esigenze
+                    della tua attività.
+                </p>
+
+                <a
+                    href="#form-business"
+                    class="inline-flex mt-8 px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-lg shadow-emerald-500/20 transition"
+                >
+                    Richiedi Analisi Gratuita
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer
+        class="bg-slate-950 border-t border-slate-800 text-slate-500 py-10"
+    >
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+
+            <p class="text-xs">
+                © 2026 BrokerUtenzeLuca.
+                Consulenza per Imprese, Professionisti e Partite IVA.
             </p>
 
-            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#form-business" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-base shadow-lg shadow-cyan-500/20 transition-all">
-                    Richiedi Audit Aziendale
-                </a>
-                <a href="https://wa.me/393277545377?text=Ciao%20Luca,%20vorrei%20valutare%20le%20utenze%20della%20mia%20azienda." 
-                   target="_blank" 
-                   class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-500/50 text-white font-semibold text-base transition flex items-center justify-center gap-2">
-                    <i data-lucide="message-square" class="w-5 h-5 text-cyan-400"></i> WhatsApp Business
-                </a>
-            </div>
-        </div>
-    </section>
+            <p class="mt-3 text-xs">
+                Energia · Gas · Fibra Business · Telefonia · Sicurezza
+            </p>
 
-    <!-- VANTAGGI BUSINESS -->
-    <section class="py-20 bg-slate-900/50 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-extrabold text-white">I Servizi Integrati per la Tua Impresa</h2>
-                <p class="mt-4 text-slate-400">Un pacchetto di consulenza a 360° gestito da un unico professionista di fiducia.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Servizio 1 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition">
-                    <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-5">
-                        <i data-lucide="zap" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Energia & Gas Business</h3>
-                    <p class="text-sm text-slate-400">Tariffe dedicate a consumo variabile o fisso, ottimizzazione delle penali per reattiva e controllo periodico degli indici di mercato.</p>
-                </div>
-
-                <!-- Servizio 2 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition">
-                    <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-5">
-                        <i data-lucide="wifi" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Fibra & Centralini Cloud</h3>
-                    <p class="text-sm text-slate-400">Connettività professionale B2B con banda minima garantita, linee di backup e centralini flessibili per il tuo ufficio.</p>
-                </div>
-
-                <!-- Servizio 3 -->
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-cyan-500/40 transition">
-                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center text-purple-400 mb-5">
-                        <i data-lucide="shield-check" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Sicurezza & Allarmi</h3>
-                    <p class="text-sm text-slate-400">Sistemi di allarme anti-intrusione e videosorveglianza dedicati alla protezione di locali commerciali e magazzini.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Colonna Modulo Netlify Aziende & Business Sistemata (5/12) -->
-<div class="lg:col-span-5 relative w-full rounded-2xl overflow-hidden z-10 shadow-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 flex flex-col justify-between">
-    <div>
-        <div class="mb-6 text-center sm:text-left">
-            <span class="text-techCyan text-xs font-bold uppercase tracking-widest">Analisi Aziendale</span>
-            <h3 class="text-xl font-bold text-white mt-1">Richiedi Audit Energetico Business</h3>
         </div>
 
-        <!-- FORM CONFIGURATO PER NETLIFY CON NOME UNIVOCO BUSINESS -->
-        <form name="Analisi-Business" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-4">
-            
-            <!-- PARAMETRO STRUTTURALE DI RICONOSCIMENTO PER NETLIFY -->
-            <input type="hidden" name="form-name" value="Analisi-Business" />
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Ragione Sociale / Azienda</label>
-                    <input type="text" name="Azienda" placeholder="Azienda Srl" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-techCyan">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Telefono / Referente</label>
-                    <input type="tel" name="Telefono" placeholder="+39 333 0000000" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-techCyan">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Aziendale</label>
-                    <input type="email" name="Email" placeholder="contatti@azienda.it" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-techCyan">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Servizio Richiesto</label>
-                    <select name="Servizio_Interesse" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-techCyan">
-                        <option>Luce & Gas Business / P.IVA</option>
-                        <option>Connettività Fibra Dedicata</option>
-                        <option>Centralini & Telefonia Mobile Aziendale</option>
-                        <option>Efficiency & Impianti Fotovoltaici</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- SEZIONE CARICAMENTO BOLLETTA AZIENDALE FUNZIONANTE -->
-            <div>
-                <label class="block text-xs font-semibold text-slate-300 mb-1">Carica Bolletta Aziendale (PDF o Foto)</label>
-                <div onclick="document.getElementById('file-input-business').click()" class="border-2 border-dashed border-slate-800 hover:border-techCyan/50 bg-slate-950 rounded-xl p-4 text-center cursor-pointer transition">
-                    <i data-lucide="upload-cloud" class="w-6 h-6 text-techCyan mx-auto mb-1"></i>
-                    <p id="file-label-business" class="text-xs text-slate-400">Trascina la bolletta oppure <span class="text-techCyan underline">sfoglia</span></p>
-                    <span class="text-[10px] text-slate-600 block mt-1">Formati: PDF, JPG, PNG (Max 15MB)</span>
-                    
-                    <input type="file" id="file-input-business" name="Allegato" required class="hidden" onchange="if(this.files.length > 0) { document.getElementById('file-label-business').innerText = this.files[0].name; }">
-                </div>
-            </div>
-
-            <button type="submit" class="w-full py-3.5 bg-techCyan hover:bg-cyan-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-techCyan/20 transition text-sm">
-                Invia Richiesta Analisi Business
-            </button>
-        </form>
-    </div>
-<div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
-        <i data-lucide="shield-check" class="w-4 h-4 text-techCyan flex-shrink-0"></i>
-        <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
-    </div>
-</div>
-    <div class="w-full mt-4 p-2.5 bg-slate-950/60 rounded-xl border border-slate-800/80 text-center flex items-center justify-center gap-2 text-xs text-slate-400">
-        <i data-lucide="shield-check" class="w-4 h-4 text-techCyan flex-shrink-0"></i>
-        <span>Inoltro protetto e nel rispetto delle normative GDPR.</span>
-    </div>
-</div>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 border-t border-slate-800 text-slate-500 py-8 text-xs text-center">
-        <p>© 2026 BrokerUtenzeLuca. Consulenza indipendente per Imprese e Partite IVA.</p>
     </footer>
 
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
     <script>
+
         document.addEventListener("DOMContentLoaded", function () {
-            if (typeof lucide !== 'undefined') lucide.createIcons();
+
+            /*
+             * Inizializza le icone Lucide
+             */
+
+            if (typeof lucide !== "undefined") {
+                lucide.createIcons();
+            }
+
+
+            /*
+             * Mostra il nome del file selezionato
+             */
+
+            const fileInput =
+                document.getElementById("file-input-business");
+
+            const fileLabel =
+                document.getElementById("file-label-business");
+
+
+            if (fileInput && fileLabel) {
+
+                fileInput.addEventListener("change", function () {
+
+                    if (this.files && this.files.length > 0) {
+
+                        fileLabel.textContent =
+                            "File selezionato: " +
+                            this.files[0].name;
+
+                    } else {
+
+                        fileLabel.textContent =
+                            "Seleziona una bolletta in PDF, JPG o PNG";
+
+                    }
+
+                });
+
+            }
+
         });
+
     </script>
-<script>
-    const TELEGRAM_TOKEN = 8846889230:AAEgE-2B-On_V-GKDVx_ywWcOa9ZH9WNqFo
-    const TELEGRAM_CHAT_ID = "8232121388";
 
-    async function inviaNotificaLead(evento, tipoForm) {
-        evento.preventDefault();
 
-        const form = evento.target;
-        const formData = new FormData(form);
-        
-        let messaggio = `🚀 *NUOVO LEAD DA SITO WEB* (${tipoForm})\n\n`;
-        
-        for (let [key, value] of formData.entries()) {
-            if (value && typeof value === 'string') {
-                messaggio += `• *${key}:* ${value}\n`;
-            }
+    <!-- =========================================================
+         INTERGRAM
+         NOTA:
+         il sistema di chat deve essere configurato separatamente.
+    ========================================================== -->
+
+    <script>
+
+        window.intergramCustomizations = {
+
+            titleClosed: "Chatta con Luca",
+
+            titleOpen: "Consulenza Business",
+
+            introMessage:
+                "Ciao! Sei nella sezione Aziende. Come posso aiutarti a valutare le utenze della tua attività?",
+
+            mainColor: "#06b6d4",
+
+            alwaysUseFloatingButton: true
+
+        };
+
+    </script>
+
+
+    <style>
+
+        .intergram-chat-button {
+            left: 20px !important;
+            right: auto !important;
         }
 
-        try {
-            const response = await fetch(`https://api.telegram.org/bot${8846889230:AAEgE-2B-On_V-GKDVx_ywWcOa9ZH9WNqFo}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: 8232121388,
-                    text: messaggio,
-                    parse_mode: 'Markdown'
-                })
-            });
-
-            if (response.ok) {
-                alert("Richiesta inviata con successo! Ti contatterò entro 24 ore.");
-                form.reset();
-            } else {
-                alert("Errore nell'invio. Scrivimi direttamente su WhatsApp!");
-            }
-        } catch (error) {
-            console.error("Errore invio lead:", error);
-            alert("Si è verificato un errore di connessione.");
+        #intergramChatWindow {
+            left: 20px !important;
+            right: auto !important;
         }
-    }
-    </script>
-<!-- CHAT LIVE IN REAL-TIME COLLEGATA A TELEGRAM (INTERGRAM) -->
-<script>
-    window.intergramId = "8232121388";
-    window.intergramCustomizations = {
-        titleClosed: 'Chatta con Luca Live',
-        titleOpen: 'Audit Energetico Business',
-        introMessage: 'Ciao! Sei nella sezione Aziende. Come posso ottimizzare i costi della tua struttura?',
-        mainColor: '#06b6d4', // Colore ciano coordinato con la pagina business
-        alwaysUseFloatingButton: true
-    };
-</script>
-<style>
-    .intergram-chat-button { left: 20px !important; right: auto !important; }
-    #intergramChatWindow { left: 20px !important; right: auto !important; }
-</style>
-<script id="intergram" type="text/javascript" src="https://intergram.xyz"></script>
+
+    </style>
+
+
 </body>
 </html>
